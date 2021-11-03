@@ -1,0 +1,60 @@
+.closeIcon {
+  cursor: pointer;
+  width: 45px;
+  height: 45px;
+  position: absolute;
+  right: 24%;
+  top: 0%;
+}
+@media screen and (max-width: 700px) {
+  .closeIcon {
+    right: 0%;
+  }
+}
+div.closeIcon rect {
+  fill: #ffffff;
+}
+
+div.closeIcon ellipse {
+  fill: #e04f5f;
+}
+
+/* .closeIcon:hover rect{
+  fill:#337ab7
+} */
+
+div.closeIconStaff rect {
+  fill: #ffffff;
+}
+
+div.closeIconStaff ellipse {
+  fill: #e04f5f;
+}
+
+/* .closeIconStaff:hover rect{
+  fill:#337ab7
+} */
+
+div.buttonClosexls rect {
+  fill: #ffffff;
+}
+
+div.buttonClosexls ellipse {
+  fill: #e04f5f;
+}
+
+/* .buttonClosexls:hover rect{
+  fill:#337ab7
+} */
+
+div.buttonCloseIMG rect {
+  fill: #ffffff;
+}
+
+div.buttonCloseIMG ellipse {
+  fill: #e04f5f;
+}
+
+/* .buttonCloseIMG:hover rect{
+  fill:#337ab7
+} */

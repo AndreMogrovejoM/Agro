@@ -1,0 +1,132 @@
+<xml xmlns="http://www.w3.org/1999/xhtml">
+  <tab name="init" type="InitTab" active="true" scrollx="1110.4001018702984" scrolly="448.599979788065" scale="1">
+    <block xmlns="https://developers.google.com/blockly/xml" type="initSettings" id="w[reBSGnm;GXg%{m}oWz" x="-710" y="-390">
+      <field name="LOAD_COMP_ASSETS">TRUE</field>
+      <field name="FULLSCREEN">FALSE</field>
+      <field name="BKG_TRANSPARENCY">FALSE</field>
+      <field name="PRESERVE_DRAW_BUF">FALSE</field>
+      <field name="FADE_ANNOTATIONS">FALSE</field>
+    </block>
+    <block xmlns="https://developers.google.com/blockly/xml" type="initPreloader" id="{Q?rsWu/;~~Q4#=O5zcr" x="-730" y="-170">
+      <statement name="DO_PROGRESS">
+        <block type="setHTMLElemAttribute" id="s8O`IbdSM5D4}zKJ-Yr^" inline="false">
+          <field name="ATTRIBUTE">innerHTML</field>
+          <field name="PARENT">FALSE</field>
+          <value name="VALUE">
+            <block type="text_join" id="*THxMOZ-Sc;#Qsdz^%F`">
+              <mutation items="2"/>
+              <value name="ADD0">
+                <block type="percentage" id="`Wo,v02l6tKX2#_$5tOC"/>
+              </value>
+              <value name="ADD1">
+                <block type="text" id="k#Sb4P}lO]p?m`}7(Jf7">
+                  <field name="TEXT">%</field>
+                </block>
+              </value>
+            </block>
+          </value>
+          <value name="ID">
+            <shadow type="text">
+              <field name="TEXT"/>
+            </shadow>
+            <block type="text" id="@:7Z|W1X!}P;`c(n]H+G">
+              <field name="TEXT">percentage</field>
+            </block>
+          </value>
+          <next>
+            <block type="setHTMLElemAttribute" id="?TC%-%pUNfzwS2B9*ed+" inline="false">
+              <field name="ATTRIBUTE">style</field>
+              <field name="PARENT">FALSE</field>
+              <value name="VALUE">
+                <block type="text_join" id="x/]F4%GPiWqrY2eA;i[`">
+                  <mutation items="3"/>
+                  <value name="ADD0">
+                    <block type="text" id="qT{1UK,5l(:Yc^934YqM">
+                      <field name="TEXT">stroke-dashoffset: </field>
+                    </block>
+                  </value>
+                  <value name="ADD1">
+                    <block type="math_arithmetic" id="U/g]q2UAr]i[2N1w(rH+">
+                      <field name="OP">MINUS</field>
+                      <value name="A">
+                        <shadow type="math_number" id="(_q^[KepkJ5?ZILo@I8U">
+                          <field name="NUM">472</field>
+                        </shadow>
+                      </value>
+                      <value name="B">
+                        <shadow type="math_number">
+                          <field name="NUM">2</field>
+                        </shadow>
+                        <block type="math_arithmetic" id="!+`5u_H3_;aw31xTzc%b">
+                          <field name="OP">DIVIDE</field>
+                          <value name="A">
+                            <shadow type="math_number">
+                              <field name="NUM">475</field>
+                            </shadow>
+                            <block type="math_arithmetic" id="s3LZ0C~pAF2;@ZIWrslE">
+                              <field name="OP">MULTIPLY</field>
+                              <value name="A">
+                                <shadow type="math_number" id="lrKL5Eo9V]wq{_:W-qWS">
+                                  <field name="NUM">472</field>
+                                </shadow>
+                              </value>
+                              <value name="B">
+                                <shadow type="math_number">
+                                  <field name="NUM">2</field>
+                                </shadow>
+                                <block type="percentage" id="?Mv%#gi)k|#2Lq_Qlj!j"/>
+                              </value>
+                            </block>
+                          </value>
+                          <value name="B">
+                            <shadow type="math_number" id="G}3+wJoc~4uOt9y0t,nd">
+                              <field name="NUM">100</field>
+                            </shadow>
+                          </value>
+                        </block>
+                      </value>
+                    </block>
+                  </value>
+                  <value name="ADD2">
+                    <block type="text" id="hHliG{z5mHY#ca5y,Fp@">
+                      <field name="TEXT">;</field>
+                    </block>
+                  </value>
+                </block>
+              </value>
+              <value name="ID">
+                <shadow type="text">
+                  <field name="TEXT"/>
+                </shadow>
+                <block type="text" id="A2e83GM`:obMVUk[v,Cb">
+                  <field name="TEXT">circle</field>
+                </block>
+              </value>
+            </block>
+          </next>
+        </block>
+      </statement>
+      <statement name="DO_END">
+        <block type="setHTMLElemStyle" id="u6nI.pTiHZb{0os.mqO*">
+          <field name="PROPERTY">display</field>
+          <field name="PARENT">FALSE</field>
+          <value name="VALUE">
+            <block type="text" id="6a/*Efw6[jFnc0@)E!5b">
+              <field name="TEXT">none</field>
+            </block>
+          </value>
+          <value name="ID">
+            <shadow type="text">
+              <field name="TEXT"/>
+            </shadow>
+            <block type="text" id="+R,L;bv(!V:[QjIni4~#">
+              <field name="TEXT">preloader_screen</field>
+            </block>
+          </value>
+        </block>
+      </statement>
+    </block>
+  </tab>
+  <tab name="main" type="MainTab" active="false" scrollx="759" scrolly="448.5" scale="0.9"></tab>
+  <editorsettings viewport-x="749.199951171875" viewport-y="105.5999984741211" viewport-w="768" viewport-h="486.5" viewport-hidden="true" toolbox-library-mode="false" toolbox-minimized-mode="false"></editorsettings>
+</xml>

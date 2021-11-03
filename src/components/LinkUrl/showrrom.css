@@ -1,0 +1,199 @@
+.backgroundSR {
+  padding: 10px;
+  width: 50%;
+  height: 99%;
+  border-radius: 15px;
+  background: linear-gradient(
+    to right bottom,
+    rgba(0, 0, 0, 0.712),
+    rgb(68, 111, 146)
+  );
+  border-color: #555;
+  border: 2px solid #3f413f;
+}
+
+.backgroundDenegacion {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 450px;
+  height: 150px;
+  border-radius: 15px;
+  background: linear-gradient(
+    to right bottom,
+    rgba(0, 0, 0, 0.712),
+    rgb(68, 111, 146)
+  );
+
+  border-color: #555;
+  border: 2px solid #3f413f;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.pAccDene {
+  color: #fff;
+  font-size: x-large;
+}
+.buttonCloseACD {
+  position: relative;
+  width: 45px;
+  height: 45px;
+  top: -75px;
+  right: -120px;
+}
+.buttonCloseACD:hover {
+  cursor: pointer;
+}
+.containerSR {
+  display: flex;
+  /* flex-wrap: wrap; */
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  align-content: flex-start;
+  height: 100%;
+  overflow: auto;
+  /* overflow: scroll; */
+}
+
+.stripedborder {
+  border: 3px dashed rgba(155, 155, 155, 0.384);
+  width: 100%;
+  margin: auto;
+  margin-top: 95%;
+  margin-bottom: 5%;
+  border-style: inset;
+}
+
+.boxT1 {
+  background-color: rgba(146, 141, 141, 0.247);
+  width: 95%;
+  height: 1250px;
+  border: 1px solid;
+  border-radius: 10px;
+  border-color: rgb(153, 153, 153);
+  margin: 4px;
+  /* overflow: hidden; */
+  display: flex;
+}
+
+@media screen and (max-width: 700px) {
+  .backgroundSR {
+    width: 100%;
+    height: 100%;
+  }
+  .boxT1 {
+    width: 100%;
+  }
+}
+
+.tituloDescripcion {
+  padding-top: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  /* flex-direction: column-reverse; */
+}
+
+.colorTitulo {
+  /* background-color: rgb(255, 255, 255); */
+  color: rgb(255, 255, 255);
+  text-align-last: left;
+  /* font-weight: bold; */
+  margin-top: 5px;
+  margin-bottom: 5px;
+  font-size: 20px;
+}
+.Descripcion {
+  text-align: left;
+  color: #fff;
+  margin-bottom: 10px;
+  margin-left: 5px;
+  font-family: sans-serif;
+  /* text-transform: uppercase; */
+}
+
+.boxT1Content {
+  padding: 5px;
+}
+
+.boxContentInformation {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.imageSR {
+  top: 0%;
+  width: 120px;
+  height: 120px;
+  padding: 10px;
+  border-radius: 100%;
+}
+
+.button_Subscriberse {
+  text-transform: capitalize;
+  font-size: 15px;
+  font-weight: bold;
+  background-color: rgb(37, 137, 223);
+  color: #fff;
+  border: 1px solid rgb(58, 127, 255);
+  margin: 4px;
+  margin-top: 85px;
+  /* vertical-align: middle; */
+  /* outline: 0; */
+  padding: 10px;
+  border-radius: 4px;
+  font-family: sans-serif;
+  cursor: pointer;
+}
+
+.date {
+  color: #fff;
+  pointer-events: none;
+}
+
+.time {
+  color: #fff;
+  pointer-events: none;
+}
+
+h4 {
+  display: block;
+  margin-block-start: 0em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  font-weight: bold;
+  color: #fff;
+}
+
+.input2 {
+  margin: 0.5em;
+  vertical-align: middle;
+  outline: 0;
+  border-radius: 4px;
+  width: calc(100% - 2em - 10px);
+  font-family: sans-serif;
+}
+
+.input3 {
+  border: 1px solid #ccc;
+  color: rgb(49, 49, 49);
+  margin: 0.5em;
+  vertical-align: middle;
+  outline: 0;
+  padding: 0.5em 1em;
+  border-radius: 4px;
+  font-family: sans-serif;
+}
+
+.buttonCloseIShowRoom {
+  flex-flow: inherit;
+  /* position: relative; */
+  top: 0%;
+  left: 0%;
+  width: 45px;
+  height: 45px;
+}

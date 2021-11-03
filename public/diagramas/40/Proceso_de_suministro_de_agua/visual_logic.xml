@@ -1,0 +1,1194 @@
+<xml xmlns="http://www.w3.org/1999/xhtml">
+  <tab name="init" type="InitTab" active="true" scrollx="875" scrolly="448.49999999999983" scale="0.9">
+    <block xmlns="https://developers.google.com/blockly/xml" type="initSettings" id="lK%Q*m.e7GR3w#O]b0~X" x="-670" y="-370">
+      <field name="LOAD_COMP_ASSETS">TRUE</field>
+      <field name="FULLSCREEN">FALSE</field>
+      <field name="BKG_TRANSPARENCY">FALSE</field>
+      <field name="PRESERVE_DRAW_BUF">FALSE</field>
+      <field name="FADE_ANNOTATIONS">TRUE</field>
+    </block>
+    <block xmlns="https://developers.google.com/blockly/xml" type="initPreloader" id="zYLrr]C?.*?8vdih#w:w" x="-670" y="-190">
+      <statement name="DO_PROGRESS">
+        <block type="setHTMLElemAttribute" id="(:FHrMPVC2+3s+0gT@y?" inline="false">
+          <field name="ATTRIBUTE">innerHTML</field>
+          <field name="PARENT">FALSE</field>
+          <value name="VALUE">
+            <block type="text_join" id="3%;UkM-.s1D|j5+DPBFZ">
+              <mutation items="2"/>
+              <value name="ADD0">
+                <block type="percentage" id="aCs!w80hWhAm,PHhYvM)"/>
+              </value>
+              <value name="ADD1">
+                <block type="text" id="nUN+d@p2_bgQZfb@J[,-">
+                  <field name="TEXT">%</field>
+                </block>
+              </value>
+            </block>
+          </value>
+          <value name="ID">
+            <shadow type="text">
+              <field name="TEXT"/>
+            </shadow>
+            <block type="text" id="[fC]*Pdps$Jn];kw6hJ0">
+              <field name="TEXT">percentage</field>
+            </block>
+          </value>
+          <next>
+            <block type="setHTMLElemAttribute" id="%b}jup#aocUsTI,M)Q*~" inline="false">
+              <field name="ATTRIBUTE">style</field>
+              <field name="PARENT">FALSE</field>
+              <value name="VALUE">
+                <block type="text_join" id="cRM:GO;/t,|kZk{i8kY2">
+                  <mutation items="3"/>
+                  <value name="ADD0">
+                    <block type="text" id="oKh7ck|(7M5?{*7^rIA-">
+                      <field name="TEXT">stroke-dashoffset: </field>
+                    </block>
+                  </value>
+                  <value name="ADD1">
+                    <block type="math_arithmetic" id="C?eZ9X@R9%;Dw=PT1z^9">
+                      <field name="OP">MINUS</field>
+                      <value name="A">
+                        <shadow type="math_number" id="kS;gRKrhu1pA|1.I:Tdj">
+                          <field name="NUM">472</field>
+                        </shadow>
+                      </value>
+                      <value name="B">
+                        <shadow type="math_number">
+                          <field name="NUM">2</field>
+                        </shadow>
+                        <block type="math_arithmetic" id="lRhY=92:B/Y^CkWRfO~)">
+                          <field name="OP">DIVIDE</field>
+                          <value name="A">
+                            <shadow type="math_number">
+                              <field name="NUM">475</field>
+                            </shadow>
+                            <block type="math_arithmetic" id="r-$uzAIXgD9iVeRJD0aU">
+                              <field name="OP">MULTIPLY</field>
+                              <value name="A">
+                                <shadow type="math_number" id="Msto^[!}pokCJlu#)se]">
+                                  <field name="NUM">472</field>
+                                </shadow>
+                              </value>
+                              <value name="B">
+                                <shadow type="math_number">
+                                  <field name="NUM">2</field>
+                                </shadow>
+                                <block type="percentage" id="aGnp_3/J@fasJFl.,tpV"/>
+                              </value>
+                            </block>
+                          </value>
+                          <value name="B">
+                            <shadow type="math_number" id="OrN8*0ky0%9~@A(7)Z{[">
+                              <field name="NUM">100</field>
+                            </shadow>
+                          </value>
+                        </block>
+                      </value>
+                    </block>
+                  </value>
+                  <value name="ADD2">
+                    <block type="text" id="^T]?xaySIfLcQsnj%6Fv">
+                      <field name="TEXT">;</field>
+                    </block>
+                  </value>
+                </block>
+              </value>
+              <value name="ID">
+                <shadow type="text">
+                  <field name="TEXT"/>
+                </shadow>
+                <block type="text" id="me`a_Nd[.Arlo#*6Sv~9">
+                  <field name="TEXT">circle</field>
+                </block>
+              </value>
+            </block>
+          </next>
+        </block>
+      </statement>
+      <statement name="DO_END">
+        <block type="setHTMLElemStyle" id="CJLeB?~qH3=h/oYzv?9^">
+          <field name="PROPERTY">display</field>
+          <field name="PARENT">FALSE</field>
+          <value name="VALUE">
+            <block type="text" id=".9`%#pFWllZNc;`lw2bM">
+              <field name="TEXT">none</field>
+            </block>
+          </value>
+          <value name="ID">
+            <shadow type="text">
+              <field name="TEXT"/>
+            </shadow>
+            <block type="text" id="ZW%@8{wp-x-Y*O:*Kz#5">
+              <field name="TEXT">preloader_screen</field>
+            </block>
+          </value>
+        </block>
+      </statement>
+    </block>
+  </tab>
+  <tab name="main" type="MainTab" active="false" scrollx="1977.82421875" scrolly="894.5902361437666" scale="1">
+    <block xmlns="https://developers.google.com/blockly/xml" type="whenHovered" id="Yw%.FZek@[DH6`n_,Ec/" x="-1370" y="-890">
+      <mutation xmlns="http://www.w3.org/1999/xhtml" adveventoptions="false"></mutation>
+      <field name="X_RAY">FALSE</field>
+      <value name="VALUE">
+        <shadow type="objectList" id="(Dyq{!|4X=J9!Gr)h2|d">
+          <field name="FIELDNAME">hidro_1_mesh</field>
+        </shadow>
+      </value>
+      <statement name="DO_OVER">
+        <block type="outline" id="Ta2S;rx#98xym^LR%7,i">
+          <field name="DO_WHAT">ENABLE</field>
+          <value name="TARGET">
+            <shadow type="objectList" id="a_-b}b1](^zf4wn@;-Ef">
+              <field name="FIELDNAME">hidro_1_mesh</field>
+            </shadow>
+          </value>
+        </block>
+      </statement>
+      <statement name="DO_OUT">
+        <block type="outline" id="0%4i0GMGfy*A64^*u$Te">
+          <field name="DO_WHAT">DISABLE</field>
+          <value name="TARGET">
+            <shadow type="objectList" id="]G-c5Ge{-s3!crCPXr~?">
+              <field name="FIELDNAME">hidro_1_mesh</field>
+            </shadow>
+          </value>
+        </block>
+      </statement>
+      <next>
+        <block type="whenHovered" id="cze??Q!Gc1?rblgif#hl">
+          <mutation xmlns="http://www.w3.org/1999/xhtml" adveventoptions="false"></mutation>
+          <field name="X_RAY">FALSE</field>
+          <value name="VALUE">
+            <shadow type="objectList" id="TLP)$bVvh`2@ya`6_FY;">
+              <field name="FIELDNAME">hidro_2_mesh</field>
+            </shadow>
+          </value>
+          <statement name="DO_OVER">
+            <block type="outline" id="Y5bVxqa3s({$E;oW1]Og">
+              <field name="DO_WHAT">ENABLE</field>
+              <value name="TARGET">
+                <shadow type="objectList" id="tMuZKi^gBFxc)r9)oVXv">
+                  <field name="FIELDNAME">hidro_2_mesh</field>
+                </shadow>
+              </value>
+            </block>
+          </statement>
+          <statement name="DO_OUT">
+            <block type="outline" id="rqXhwM%:}L^M*qhsQGs:">
+              <field name="DO_WHAT">DISABLE</field>
+              <value name="TARGET">
+                <shadow type="objectList" id="a,_8..,Axb}S-5G5*rR)">
+                  <field name="FIELDNAME">hidro_2_mesh</field>
+                </shadow>
+              </value>
+            </block>
+          </statement>
+          <next>
+            <block type="whenHovered" id="oo!w9{NnZ$Jkq=sL;;0=">
+              <mutation xmlns="http://www.w3.org/1999/xhtml" adveventoptions="false"></mutation>
+              <field name="X_RAY">FALSE</field>
+              <value name="VALUE">
+                <shadow type="objectList" id="*Gc{!`VbQ).}X)2=npuo">
+                  <field name="FIELDNAME">Circle.014</field>
+                </shadow>
+              </value>
+              <statement name="DO_OVER">
+                <block type="outline" id="Y,?jb!)P33w@H?9+y@`^">
+                  <field name="DO_WHAT">ENABLE</field>
+                  <value name="TARGET">
+                    <shadow type="objectList" id="Sj2OBn[0AwYC@vG$sb@p">
+                      <field name="FIELDNAME">Circle.014</field>
+                    </shadow>
+                  </value>
+                </block>
+              </statement>
+              <statement name="DO_OUT">
+                <block type="outline" id="6E]C9)bZI@0Z%C??J.+:">
+                  <field name="DO_WHAT">DISABLE</field>
+                  <value name="TARGET">
+                    <shadow type="objectList" id="BBk+;a_0(JEA4XKY{P$8">
+                      <field name="FIELDNAME">Circle.014</field>
+                    </shadow>
+                  </value>
+                </block>
+              </statement>
+              <next>
+                <block type="whenHovered" id="Vu+jIC|mY^wq]X(_T`YL">
+                  <mutation xmlns="http://www.w3.org/1999/xhtml" adveventoptions="false"></mutation>
+                  <field name="X_RAY">FALSE</field>
+                  <value name="VALUE">
+                    <shadow type="objectList" id="f~3DAjUws,`_/zd@4-o@">
+                      <field name="FIELDNAME">laguna_suches_mesh</field>
+                    </shadow>
+                  </value>
+                  <statement name="DO_OVER">
+                    <block type="outline" id="b8;}r9E`-9Gi5r.pj$h|">
+                      <field name="DO_WHAT">ENABLE</field>
+                      <value name="TARGET">
+                        <shadow type="objectList" id="hR?}n;Q~G-Mbrn}=?bOm">
+                          <field name="FIELDNAME">laguna_suches_mesh</field>
+                        </shadow>
+                      </value>
+                    </block>
+                  </statement>
+                  <statement name="DO_OUT">
+                    <block type="outline" id="KAe{[:G038-dv^VRRzMz">
+                      <field name="DO_WHAT">DISABLE</field>
+                      <value name="TARGET">
+                        <shadow type="objectList" id="D5/6miCEl@I1Rj1YD#9T">
+                          <field name="FIELDNAME">laguna_suches_mesh</field>
+                        </shadow>
+                      </value>
+                    </block>
+                  </statement>
+                  <next>
+                    <block type="whenHovered" id="wOx6MxGV6-++2V_Fz_GP">
+                      <mutation xmlns="http://www.w3.org/1999/xhtml" adveventoptions="false"></mutation>
+                      <field name="X_RAY">FALSE</field>
+                      <value name="VALUE">
+                        <shadow type="objectList" id="l*tq_n$^?ANYed=QH^jV">
+                          <field name="FIELDNAME">lake_viña</field>
+                        </shadow>
+                      </value>
+                      <statement name="DO_OVER">
+                        <block type="outline" id=".:,fQI$Z75$!??u{-N?n">
+                          <field name="DO_WHAT">ENABLE</field>
+                          <value name="TARGET">
+                            <shadow type="objectList" id="BfkHusmf#IxmZ*tP5-,f">
+                              <field name="FIELDNAME">lake_viña</field>
+                            </shadow>
+                          </value>
+                        </block>
+                      </statement>
+                      <statement name="DO_OUT">
+                        <block type="outline" id="/V$#CGaeSl4ofE94JZ+R">
+                          <field name="DO_WHAT">DISABLE</field>
+                          <value name="TARGET">
+                            <shadow type="objectList" id="~gp`hCr3ddn2*|Jn8rj_">
+                              <field name="FIELDNAME">lake_viña</field>
+                            </shadow>
+                          </value>
+                        </block>
+                      </statement>
+                      <next>
+                        <block type="whenHovered" id="(}7w+[*2D!^r3T`pFWr,">
+                          <mutation xmlns="http://www.w3.org/1999/xhtml" adveventoptions="false"></mutation>
+                          <field name="X_RAY">FALSE</field>
+                          <value name="VALUE">
+                            <shadow type="objectList" id=",!|s~BLC+saZ,^PCrpJM">
+                              <field name="FIELDNAME">reservorio_antiguo_mesh</field>
+                            </shadow>
+                          </value>
+                          <statement name="DO_OVER">
+                            <block type="outline" id="2G6[q_Tao]s,JPmkw9}4">
+                              <field name="DO_WHAT">ENABLE</field>
+                              <value name="TARGET">
+                                <shadow type="objectList" id="dTUSA7AQG!Dl71XWU~jc">
+                                  <field name="FIELDNAME">reservorio_antiguo_mesh</field>
+                                </shadow>
+                              </value>
+                            </block>
+                          </statement>
+                          <statement name="DO_OUT">
+                            <block type="outline" id="w$ERsmX*X/+-LyIG+n@I">
+                              <field name="DO_WHAT">DISABLE</field>
+                              <value name="TARGET">
+                                <shadow type="objectList" id="J[hoQzLWao|k%Iwz~i4c">
+                                  <field name="FIELDNAME">reservorio_antiguo_mesh</field>
+                                </shadow>
+                              </value>
+                            </block>
+                          </statement>
+                          <next>
+                            <block type="whenHovered" id="1n#-`1;E}|GC]M]%No9~">
+                              <mutation xmlns="http://www.w3.org/1999/xhtml" adveventoptions="false"></mutation>
+                              <field name="X_RAY">FALSE</field>
+                              <value name="VALUE">
+                                <shadow type="objectList" id="%{K*wDWc3V7+9rwKR(Qx">
+                                  <field name="FIELDNAME">reservorio_nuevo_mesh</field>
+                                </shadow>
+                              </value>
+                              <statement name="DO_OVER">
+                                <block type="outline" id="NPt{5D/)L^#E`=4Bpe/e">
+                                  <field name="DO_WHAT">ENABLE</field>
+                                  <value name="TARGET">
+                                    <shadow type="objectList" id="opEoUay=4uP:?`lB1RG0">
+                                      <field name="FIELDNAME">reservorio_nuevo_mesh</field>
+                                    </shadow>
+                                  </value>
+                                </block>
+                              </statement>
+                              <statement name="DO_OUT">
+                                <block type="outline" id="pi,[yt3!,E9q|GbxL]G8">
+                                  <field name="DO_WHAT">DISABLE</field>
+                                  <value name="TARGET">
+                                    <shadow type="objectList" id="(D}9]*XaJc~-$.k`G_rW">
+                                      <field name="FIELDNAME">reservorio_nuevo_mesh</field>
+                                    </shadow>
+                                  </value>
+                                </block>
+                              </statement>
+                              <next>
+                                <block type="whenHovered" id="#(SEY%^goJ]~y%71^d-2">
+                                  <mutation xmlns="http://www.w3.org/1999/xhtml" adveventoptions="false"></mutation>
+                                  <field name="X_RAY">FALSE</field>
+                                  <value name="VALUE">
+                                    <shadow type="objectList" id="=b,t5TxGTS{0`FLlDK,X">
+                                      <field name="FIELDNAME">tanque_212_mesh</field>
+                                    </shadow>
+                                  </value>
+                                  <statement name="DO_OVER">
+                                    <block type="outline" id="=NvBfIVA6EWF9a{ng%22">
+                                      <field name="DO_WHAT">ENABLE</field>
+                                      <value name="TARGET">
+                                        <shadow type="objectList" id="OE3?(2L4U-:HyikSxo3_">
+                                          <field name="FIELDNAME">tanque_212_mesh</field>
+                                        </shadow>
+                                      </value>
+                                    </block>
+                                  </statement>
+                                  <statement name="DO_OUT">
+                                    <block type="outline" id="{C0sJRcp]do8a~ERMRb#">
+                                      <field name="DO_WHAT">DISABLE</field>
+                                      <value name="TARGET">
+                                        <shadow type="objectList" id="v?mX9gtQ5^FXd|Gp/LMF">
+                                          <field name="FIELDNAME">tanque_212_mesh</field>
+                                        </shadow>
+                                      </value>
+                                    </block>
+                                  </statement>
+                                  <next>
+                                    <block type="whenHovered" id="3-`*CS8|lK4chVm.A{:Y">
+                                      <mutation xmlns="http://www.w3.org/1999/xhtml" adveventoptions="false"></mutation>
+                                      <field name="X_RAY">FALSE</field>
+                                      <value name="VALUE">
+                                        <shadow type="objectList" id="EH15_zAI,p$|`[mOT^Zx">
+                                          <field name="FIELDNAME">toquepala_mesh</field>
+                                        </shadow>
+                                      </value>
+                                      <statement name="DO_OVER">
+                                        <block type="outline" id="03fF[*_$qMVKf,uDf#;t">
+                                          <field name="DO_WHAT">ENABLE</field>
+                                          <value name="TARGET">
+                                            <shadow type="objectList" id="m-XkDr$D2Ufx3wWjz]|M">
+                                              <field name="FIELDNAME">toquepala_mesh</field>
+                                            </shadow>
+                                          </value>
+                                        </block>
+                                      </statement>
+                                      <statement name="DO_OUT">
+                                        <block type="outline" id="16b@!pK8R$3$OUTS:CT*">
+                                          <field name="DO_WHAT">DISABLE</field>
+                                          <value name="TARGET">
+                                            <shadow type="objectList" id=")Df-sBuLB!LZa1Goe?=3">
+                                              <field name="FIELDNAME">toquepala_mesh</field>
+                                            </shadow>
+                                          </value>
+                                        </block>
+                                      </statement>
+                                      <next>
+                                        <block type="whenHovered" id="K*tpThS8}+t:HNX}Ry*E">
+                                          <mutation xmlns="http://www.w3.org/1999/xhtml" adveventoptions="false"></mutation>
+                                          <field name="X_RAY">FALSE</field>
+                                          <value name="VALUE">
+                                            <shadow type="objectList" id="Jubc$3Z6%Y|`u;lX@2C2">
+                                              <field name="FIELDNAME">toquepala_mesh</field>
+                                            </shadow>
+                                          </value>
+                                          <statement name="DO_OVER">
+                                            <block type="outline" id="`x_oY(h+0%dj6K~Jb36j">
+                                              <field name="DO_WHAT">ENABLE</field>
+                                              <value name="TARGET">
+                                                <shadow type="objectList" id="yYnld#{giHa4Qkxh96fl">
+                                                  <field name="FIELDNAME">toquepala_mesh</field>
+                                                </shadow>
+                                              </value>
+                                            </block>
+                                          </statement>
+                                          <statement name="DO_OUT">
+                                            <block type="outline" id="hZE-IHV{UXP)q=,Vo93~">
+                                              <field name="DO_WHAT">DISABLE</field>
+                                              <value name="TARGET">
+                                                <shadow type="objectList" id="pt3W!ePC,4;jeI1Q.r%^">
+                                                  <field name="FIELDNAME">toquepala_mesh</field>
+                                                </shadow>
+                                              </value>
+                                            </block>
+                                          </statement>
+                                        </block>
+                                      </next>
+                                    </block>
+                                  </next>
+                                </block>
+                              </next>
+                            </block>
+                          </next>
+                        </block>
+                      </next>
+                    </block>
+                  </next>
+                </block>
+              </next>
+            </block>
+          </next>
+        </block>
+      </next>
+    </block>
+    <block xmlns="https://developers.google.com/blockly/xml" type="addAnnotation" id="^2bX|]Qh,)4O#|XAsZK[" x="-610" y="-910">
+      <mutation xmlns="http://www.w3.org/1999/xhtml" usenameslot="false"></mutation>
+      <value name="ANNOTATION">
+        <shadow type="text" id="aO]*rONESAAzIP+hXx1s">
+          <field name="TEXT">1</field>
+        </shadow>
+        <block type="text" id="`UtUM@VP1F{IKH,%X!q_">
+          <field name="TEXT"/>
+        </block>
+      </value>
+      <value name="TARGET">
+        <shadow type="objectList" id="$.Q^7f.}(~3WO_OwvAv`">
+          <field name="FIELDNAME">n1</field>
+        </shadow>
+        <block type="text" id="SXG/`mPjk_42V-Ge$_/J">
+          <field name="TEXT">vw1</field>
+        </block>
+      </value>
+      <value name="CONTENTS">
+        <shadow type="text">
+          <field name="TEXT">Point of interest #1</field>
+        </shadow>
+        <block type="text" id="q9voQEP~t)(JYIT}i*/F">
+          <field name="TEXT">VW1 - Estacion de bombeo (Pozo)</field>
+        </block>
+      </value>
+      <value name="ID">
+        <shadow type="text">
+          <field name="TEXT">poi1</field>
+        </shadow>
+        <block type="text" id="#^yik)/;^?)cEI,[fVe`">
+          <field name="TEXT">1</field>
+        </block>
+      </value>
+      <next>
+        <block type="addAnnotation" id="C%=:Q}]U`*[IL2P)CXkw">
+          <mutation xmlns="http://www.w3.org/1999/xhtml" usenameslot="false"></mutation>
+          <value name="ANNOTATION">
+            <shadow type="text">
+              <field name="TEXT">1</field>
+            </shadow>
+            <block type="text" id="@f?CrL*zN=PTP7.P{4^Y">
+              <field name="TEXT"/>
+            </block>
+          </value>
+          <value name="TARGET">
+            <shadow type="objectList" id="p!Lju_RWm#k]!*L4X1Ch">
+              <field name="FIELDNAME">n1</field>
+            </shadow>
+            <block type="text" id="tz3XobScilnw{78)VU6Q">
+              <field name="TEXT">tw2a</field>
+            </block>
+          </value>
+          <value name="CONTENTS">
+            <shadow type="text">
+              <field name="TEXT">Point of interest #1</field>
+            </shadow>
+            <block type="text" id="32.Y0[=~*:GEN_t,8{dV">
+              <field name="TEXT">TW2A - Estacion de bombeo (Pozo)</field>
+            </block>
+          </value>
+          <value name="ID">
+            <shadow type="text">
+              <field name="TEXT">poi1</field>
+            </shadow>
+            <block type="text" id="IYg9eJ0lR(BZ1WFn2%H7">
+              <field name="TEXT">2</field>
+            </block>
+          </value>
+          <next>
+            <block type="addAnnotation" id="DLWf+Z4t)Y|!3!z1kBLg">
+              <mutation xmlns="http://www.w3.org/1999/xhtml" usenameslot="false"></mutation>
+              <value name="ANNOTATION">
+                <shadow type="text">
+                  <field name="TEXT">1</field>
+                </shadow>
+                <block type="text" id="j54lJc3]loj*~C:R8IPn">
+                  <field name="TEXT"/>
+                </block>
+              </value>
+              <value name="TARGET">
+                <shadow type="objectList">
+                  <field name="FIELDNAME">n1</field>
+                </shadow>
+                <block type="text" id="0u]Kg.yFNgf8#j6F?~$)">
+                  <field name="TEXT">tw3</field>
+                </block>
+              </value>
+              <value name="CONTENTS">
+                <shadow type="text">
+                  <field name="TEXT">Point of interest #1</field>
+                </shadow>
+                <block type="text" id="KtaL_L28+#|hwJ9=8Y}M">
+                  <field name="TEXT">TW3 - Estacion de bombeo (Pozo)</field>
+                </block>
+              </value>
+              <value name="ID">
+                <shadow type="text">
+                  <field name="TEXT">poi1</field>
+                </shadow>
+                <block type="text" id="G#p:BH_4J@L3*IKB`pS}">
+                  <field name="TEXT">3</field>
+                </block>
+              </value>
+              <next>
+                <block type="addAnnotation" id="Sy1M$JOH5E%H4}dAkwVq">
+                  <mutation xmlns="http://www.w3.org/1999/xhtml" usenameslot="false"></mutation>
+                  <value name="ANNOTATION">
+                    <shadow type="text">
+                      <field name="TEXT">1</field>
+                    </shadow>
+                    <block type="text" id="Ivs,g)j82n!,KWJ#K~$N">
+                      <field name="TEXT"/>
+                    </block>
+                  </value>
+                  <value name="TARGET">
+                    <shadow type="objectList">
+                      <field name="FIELDNAME">n1</field>
+                    </shadow>
+                    <block type="text" id="{6g+6;9_C2Es]s,*UI*X">
+                      <field name="TEXT">tw4</field>
+                    </block>
+                  </value>
+                  <value name="CONTENTS">
+                    <shadow type="text">
+                      <field name="TEXT">Point of interest #1</field>
+                    </shadow>
+                    <block type="text" id="Y+$iR1I*F#ygP-VhqBEg">
+                      <field name="TEXT">TW4 - Estacion de bombeo (Pozo)</field>
+                    </block>
+                  </value>
+                  <value name="ID">
+                    <shadow type="text">
+                      <field name="TEXT">poi1</field>
+                    </shadow>
+                    <block type="text" id="jhHI,HRZ2^mOY/du|s0!">
+                      <field name="TEXT">4</field>
+                    </block>
+                  </value>
+                  <next>
+                    <block type="addAnnotation" id="/U3A.g0/.Tn)M7X2Z{Ft">
+                      <mutation xmlns="http://www.w3.org/1999/xhtml" usenameslot="false"></mutation>
+                      <value name="ANNOTATION">
+                        <shadow type="text">
+                          <field name="TEXT">1</field>
+                        </shadow>
+                        <block type="text" id="L[%z2N=4jB^8G91!7=mv">
+                          <field name="TEXT"/>
+                        </block>
+                      </value>
+                      <value name="TARGET">
+                        <shadow type="objectList">
+                          <field name="FIELDNAME">n1</field>
+                        </shadow>
+                        <block type="text" id="7WN`)yA.PlZNv/:t4CDi">
+                          <field name="TEXT">tw6</field>
+                        </block>
+                      </value>
+                      <value name="CONTENTS">
+                        <shadow type="text">
+                          <field name="TEXT">Point of interest #1</field>
+                        </shadow>
+                        <block type="text" id="dT-Tb1CpIZD?Ym|`pt@1">
+                          <field name="TEXT">TW6 - Estacion de bombeo (Pozo)</field>
+                        </block>
+                      </value>
+                      <value name="ID">
+                        <shadow type="text">
+                          <field name="TEXT">poi1</field>
+                        </shadow>
+                        <block type="text" id="X_aO_wErqbce:AM=WKma">
+                          <field name="TEXT">5</field>
+                        </block>
+                      </value>
+                      <next>
+                        <block type="addAnnotation" id="MVO(YPeix;A_V.3iXd]x">
+                          <mutation xmlns="http://www.w3.org/1999/xhtml" usenameslot="false"></mutation>
+                          <value name="ANNOTATION">
+                            <shadow type="text">
+                              <field name="TEXT">1</field>
+                            </shadow>
+                            <block type="text" id="RcO!.?^i/*bP7)kM-Wcy">
+                              <field name="TEXT"/>
+                            </block>
+                          </value>
+                          <value name="TARGET">
+                            <shadow type="objectList">
+                              <field name="FIELDNAME">n1</field>
+                            </shadow>
+                            <block type="text" id="COwsPm+)Qz_yYa^I%d__">
+                              <field name="TEXT">tp11</field>
+                            </block>
+                          </value>
+                          <value name="CONTENTS">
+                            <shadow type="text">
+                              <field name="TEXT">Point of interest #1</field>
+                            </shadow>
+                            <block type="text" id="p-{R{C#ya]I`-?uzp|{m">
+                              <field name="TEXT">TP11 - Estacion de bombeo (Pozo)</field>
+                            </block>
+                          </value>
+                          <value name="ID">
+                            <shadow type="text">
+                              <field name="TEXT">poi1</field>
+                            </shadow>
+                            <block type="text" id="mlnU,Km{Y0z7*N[eWFi0">
+                              <field name="TEXT">6</field>
+                            </block>
+                          </value>
+                          <next>
+                            <block type="addAnnotation" id="5UbtbA*!XtN]9J{^o@z}">
+                              <mutation xmlns="http://www.w3.org/1999/xhtml" usenameslot="false"></mutation>
+                              <value name="ANNOTATION">
+                                <shadow type="text">
+                                  <field name="TEXT">1</field>
+                                </shadow>
+                                <block type="text" id="5Na[7H=t-+4dl94nXo#f">
+                                  <field name="TEXT"/>
+                                </block>
+                              </value>
+                              <value name="TARGET">
+                                <shadow type="objectList">
+                                  <field name="FIELDNAME">n1</field>
+                                </shadow>
+                                <block type="text" id="=cA4i_XaB1e.uN}YmFWW">
+                                  <field name="TEXT">tp12</field>
+                                </block>
+                              </value>
+                              <value name="CONTENTS">
+                                <shadow type="text">
+                                  <field name="TEXT">Point of interest #1</field>
+                                </shadow>
+                                <block type="text" id="zyy(=W[Zz4]oz8y(Dgpm">
+                                  <field name="TEXT">TP12 - Estacion de bombeo (Pozo)</field>
+                                </block>
+                              </value>
+                              <value name="ID">
+                                <shadow type="text">
+                                  <field name="TEXT">poi1</field>
+                                </shadow>
+                                <block type="text" id="OpY+f=wKZ/(R%zSA(#SQ">
+                                  <field name="TEXT">7</field>
+                                </block>
+                              </value>
+                              <next>
+                                <block type="addAnnotation" id="Gb$PN6a*rr[Ral_|Hb5{">
+                                  <mutation xmlns="http://www.w3.org/1999/xhtml" usenameslot="false"></mutation>
+                                  <value name="ANNOTATION">
+                                    <shadow type="text">
+                                      <field name="TEXT">1</field>
+                                    </shadow>
+                                    <block type="text" id="!,}#sdEu:u)wSrWq,GCY">
+                                      <field name="TEXT"/>
+                                    </block>
+                                  </value>
+                                  <value name="TARGET">
+                                    <shadow type="objectList">
+                                      <field name="FIELDNAME">n1</field>
+                                    </shadow>
+                                    <block type="text" id=",$r7|Zw]2d#2udL9Zo:7">
+                                      <field name="TEXT">tp15</field>
+                                    </block>
+                                  </value>
+                                  <value name="CONTENTS">
+                                    <shadow type="text">
+                                      <field name="TEXT">Point of interest #1</field>
+                                    </shadow>
+                                    <block type="text" id="2`5N7wpU{QcdJb6B=IqM">
+                                      <field name="TEXT">TP15 - Estacion de bombeo (Pozo)</field>
+                                    </block>
+                                  </value>
+                                  <value name="ID">
+                                    <shadow type="text">
+                                      <field name="TEXT">poi1</field>
+                                    </shadow>
+                                    <block type="text" id="~]#Jy#+Wh?22-FD|p}O[">
+                                      <field name="TEXT">8</field>
+                                    </block>
+                                  </value>
+                                  <next>
+                                    <block type="addAnnotation" id="PN6B(doO5;p}{Pymg9Cc">
+                                      <mutation xmlns="http://www.w3.org/1999/xhtml" usenameslot="false"></mutation>
+                                      <value name="ANNOTATION">
+                                        <shadow type="text">
+                                          <field name="TEXT">1</field>
+                                        </shadow>
+                                        <block type="text" id=":8cMdD*AS`pzkAT1{=Ol">
+                                          <field name="TEXT"/>
+                                        </block>
+                                      </value>
+                                      <value name="TARGET">
+                                        <shadow type="objectList">
+                                          <field name="FIELDNAME">n1</field>
+                                        </shadow>
+                                        <block type="text" id="(+l*;up5{+8YK~NA$VUb">
+                                          <field name="TEXT">tp3a</field>
+                                        </block>
+                                      </value>
+                                      <value name="CONTENTS">
+                                        <shadow type="text">
+                                          <field name="TEXT">Point of interest #1</field>
+                                        </shadow>
+                                        <block type="text" id="4Y3B%K`s^$v9`tfi:H5%">
+                                          <field name="TEXT">TP3A - Estacion de bombeo (Pozo)</field>
+                                        </block>
+                                      </value>
+                                      <value name="ID">
+                                        <shadow type="text">
+                                          <field name="TEXT">poi1</field>
+                                        </shadow>
+                                        <block type="text" id="+Zd8VTSn1DYY!c5TQ{P0">
+                                          <field name="TEXT">9</field>
+                                        </block>
+                                      </value>
+                                      <next>
+                                        <block type="addAnnotation" id="f5*rA%@wY]`p2?HVob`@">
+                                          <mutation xmlns="http://www.w3.org/1999/xhtml" usenameslot="false"></mutation>
+                                          <value name="ANNOTATION">
+                                            <shadow type="text">
+                                              <field name="TEXT">1</field>
+                                            </shadow>
+                                            <block type="text" id="$ewg_yjPfBf]xG.M-fl.">
+                                              <field name="TEXT"/>
+                                            </block>
+                                          </value>
+                                          <value name="TARGET">
+                                            <shadow type="objectList">
+                                              <field name="FIELDNAME">n1</field>
+                                            </shadow>
+                                            <block type="text" id="ew6;pS`I{zhTJ!.PrB]L">
+                                              <field name="TEXT">tp14</field>
+                                            </block>
+                                          </value>
+                                          <value name="CONTENTS">
+                                            <shadow type="text">
+                                              <field name="TEXT">Point of interest #1</field>
+                                            </shadow>
+                                            <block type="text" id="$:HuCU~ibT2|7~|@vtEp">
+                                              <field name="TEXT">TP14 - Estacion de bombeo (Pozo)</field>
+                                            </block>
+                                          </value>
+                                          <value name="ID">
+                                            <shadow type="text">
+                                              <field name="TEXT">poi1</field>
+                                            </shadow>
+                                            <block type="text" id="l?5IT6o]EPJDaYIqG2f}">
+                                              <field name="TEXT">10</field>
+                                            </block>
+                                          </value>
+                                          <next>
+                                            <block type="addAnnotation" id="*qKj2}G~o)$#t|8!]p9%">
+                                              <mutation xmlns="http://www.w3.org/1999/xhtml" usenameslot="false"></mutation>
+                                              <value name="ANNOTATION">
+                                                <shadow type="text">
+                                                  <field name="TEXT">1</field>
+                                                </shadow>
+                                                <block type="text" id="o|C8a.g}guFVwpb0oD1j">
+                                                  <field name="TEXT"/>
+                                                </block>
+                                              </value>
+                                              <value name="TARGET">
+                                                <shadow type="objectList">
+                                                  <field name="FIELDNAME">n1</field>
+                                                </shadow>
+                                                <block type="text" id="YH{H[YIDQi(aljCC8WhW">
+                                                  <field name="TEXT">tp5</field>
+                                                </block>
+                                              </value>
+                                              <value name="CONTENTS">
+                                                <shadow type="text">
+                                                  <field name="TEXT">Point of interest #1</field>
+                                                </shadow>
+                                                <block type="text" id="I|yfA[W^u~9.H/Weon)(">
+                                                  <field name="TEXT">TP5 - Estacion de bombeo (Pozo)</field>
+                                                </block>
+                                              </value>
+                                              <value name="ID">
+                                                <shadow type="text">
+                                                  <field name="TEXT">poi1</field>
+                                                </shadow>
+                                                <block type="text" id="}Mx!mHBi`{C7lxapbyD_">
+                                                  <field name="TEXT">11</field>
+                                                </block>
+                                              </value>
+                                              <next>
+                                                <block type="addAnnotation" id="T^j%OZ+?^,j*PeCj{AC4">
+                                                  <mutation xmlns="http://www.w3.org/1999/xhtml" usenameslot="false"></mutation>
+                                                  <value name="ANNOTATION">
+                                                    <shadow type="text">
+                                                      <field name="TEXT">1</field>
+                                                    </shadow>
+                                                    <block type="text" id="b}2]v1q(!}vv=]RH4g-x">
+                                                      <field name="TEXT"/>
+                                                    </block>
+                                                  </value>
+                                                  <value name="TARGET">
+                                                    <shadow type="objectList">
+                                                      <field name="FIELDNAME">n1</field>
+                                                    </shadow>
+                                                    <block type="text" id="!mWUU_okzFOEm;Wcb[=J">
+                                                      <field name="TEXT">tp8</field>
+                                                    </block>
+                                                  </value>
+                                                  <value name="CONTENTS">
+                                                    <shadow type="text">
+                                                      <field name="TEXT">Point of interest #1</field>
+                                                    </shadow>
+                                                    <block type="text" id="?7)g1hpwnq8)GNB/($o%">
+                                                      <field name="TEXT">TP8 - Estacion de bombeo (Pozo)</field>
+                                                    </block>
+                                                  </value>
+                                                  <value name="ID">
+                                                    <shadow type="text">
+                                                      <field name="TEXT">poi1</field>
+                                                    </shadow>
+                                                    <block type="text" id="/GAWvxpMHaV=3k{USDeW">
+                                                      <field name="TEXT">12</field>
+                                                    </block>
+                                                  </value>
+                                                  <next>
+                                                    <block type="addAnnotation" id="|q(;{?9j7=sc)-KQIA*8">
+                                                      <mutation xmlns="http://www.w3.org/1999/xhtml" usenameslot="false"></mutation>
+                                                      <value name="ANNOTATION">
+                                                        <shadow type="text">
+                                                          <field name="TEXT">1</field>
+                                                        </shadow>
+                                                        <block type="text" id="fq5-|E0PdP#Fb8#`$a(u">
+                                                          <field name="TEXT"/>
+                                                        </block>
+                                                      </value>
+                                                      <value name="TARGET">
+                                                        <shadow type="objectList">
+                                                          <field name="FIELDNAME">n1</field>
+                                                        </shadow>
+                                                        <block type="text" id="Dw5y(+!C6Xg-}0_%4VWn">
+                                                          <field name="TEXT">tp9a</field>
+                                                        </block>
+                                                      </value>
+                                                      <value name="CONTENTS">
+                                                        <shadow type="text">
+                                                          <field name="TEXT">Point of interest #1</field>
+                                                        </shadow>
+                                                        <block type="text" id=",C@Mvjon3R]k36FIqmy{">
+                                                          <field name="TEXT">TP9A - Estacion de bombeo (Pozo)</field>
+                                                        </block>
+                                                      </value>
+                                                      <value name="ID">
+                                                        <shadow type="text">
+                                                          <field name="TEXT">poi1</field>
+                                                        </shadow>
+                                                        <block type="text" id="J6WRU.nu?T#cntyI*v!3">
+                                                          <field name="TEXT">13</field>
+                                                        </block>
+                                                      </value>
+                                                      <next>
+                                                        <block type="addAnnotation" id="K|o:QCBKZA:HU`5-0WrJ">
+                                                          <mutation xmlns="http://www.w3.org/1999/xhtml" usenameslot="false"></mutation>
+                                                          <value name="ANNOTATION">
+                                                            <shadow type="text">
+                                                              <field name="TEXT">1</field>
+                                                            </shadow>
+                                                            <block type="text" id="3[.W!d!KUt/Y=mok/,@S">
+                                                              <field name="TEXT"/>
+                                                            </block>
+                                                          </value>
+                                                          <value name="TARGET">
+                                                            <shadow type="objectList">
+                                                              <field name="FIELDNAME">n1</field>
+                                                            </shadow>
+                                                            <block type="text" id="[ijahe_6eya@*vIQqi-8">
+                                                              <field name="TEXT">vw2</field>
+                                                            </block>
+                                                          </value>
+                                                          <value name="CONTENTS">
+                                                            <shadow type="text">
+                                                              <field name="TEXT">Point of interest #1</field>
+                                                            </shadow>
+                                                            <block type="text" id="_y4?2Ml!0wt~nGs5]Gd8">
+                                                              <field name="TEXT">VW2 - Estacion de bombeo (Pozo)</field>
+                                                            </block>
+                                                          </value>
+                                                          <value name="ID">
+                                                            <shadow type="text">
+                                                              <field name="TEXT">poi1</field>
+                                                            </shadow>
+                                                            <block type="text" id="7`y~^bZ{;kZ1^BDU[uvm">
+                                                              <field name="TEXT">14</field>
+                                                            </block>
+                                                          </value>
+                                                          <next>
+                                                            <block type="addAnnotation" id="UbiB(O+ylw8[Gj-9r7Sn">
+                                                              <mutation xmlns="http://www.w3.org/1999/xhtml" usenameslot="false"></mutation>
+                                                              <value name="ANNOTATION">
+                                                                <shadow type="text">
+                                                                  <field name="TEXT">1</field>
+                                                                </shadow>
+                                                                <block type="text" id="#F1g+_uZD_F{v{{F`*c5">
+                                                                  <field name="TEXT"/>
+                                                                </block>
+                                                              </value>
+                                                              <value name="TARGET">
+                                                                <shadow type="objectList">
+                                                                  <field name="FIELDNAME">n1</field>
+                                                                </shadow>
+                                                                <block type="text" id="j%.c9(`drTA=4^Pr@PHd">
+                                                                  <field name="TEXT">vw3</field>
+                                                                </block>
+                                                              </value>
+                                                              <value name="CONTENTS">
+                                                                <shadow type="text">
+                                                                  <field name="TEXT">Point of interest #1</field>
+                                                                </shadow>
+                                                                <block type="text" id="!F@,w=C#6@vkW5q:`cq+">
+                                                                  <field name="TEXT">VW3 - Estacion de bombeo (Pozo)</field>
+                                                                </block>
+                                                              </value>
+                                                              <value name="ID">
+                                                                <shadow type="text">
+                                                                  <field name="TEXT">poi1</field>
+                                                                </shadow>
+                                                                <block type="text" id="kp$$/d$Z18e5B/5H^{v`">
+                                                                  <field name="TEXT">15</field>
+                                                                </block>
+                                                              </value>
+                                                              <next>
+                                                                <block type="addAnnotation" id="q+N7]d=%|s2gbL|Dy91U">
+                                                                  <mutation xmlns="http://www.w3.org/1999/xhtml" usenameslot="false"></mutation>
+                                                                  <value name="ANNOTATION">
+                                                                    <shadow type="text">
+                                                                      <field name="TEXT">1</field>
+                                                                    </shadow>
+                                                                    <block type="text" id="n$$v|xe_Cp?=.^9BT$XZ">
+                                                                      <field name="TEXT"/>
+                                                                    </block>
+                                                                  </value>
+                                                                  <value name="TARGET">
+                                                                    <shadow type="objectList">
+                                                                      <field name="FIELDNAME">n1</field>
+                                                                    </shadow>
+                                                                    <block type="text" id="D$]GgE?}flA[b9=5H3e7">
+                                                                      <field name="TEXT">vw4</field>
+                                                                    </block>
+                                                                  </value>
+                                                                  <value name="CONTENTS">
+                                                                    <shadow type="text">
+                                                                      <field name="TEXT">Point of interest #1</field>
+                                                                    </shadow>
+                                                                    <block type="text" id="16Z`ZHF;$|a.t6g=h%oy">
+                                                                      <field name="TEXT">VW4 - Estacion de bombeo (Pozo)</field>
+                                                                    </block>
+                                                                  </value>
+                                                                  <value name="ID">
+                                                                    <shadow type="text">
+                                                                      <field name="TEXT">poi1</field>
+                                                                    </shadow>
+                                                                    <block type="text" id="8bK.ZWEs,iv|K{#.k^tp">
+                                                                      <field name="TEXT">16</field>
+                                                                    </block>
+                                                                  </value>
+                                                                </block>
+                                                              </next>
+                                                            </block>
+                                                          </next>
+                                                        </block>
+                                                      </next>
+                                                    </block>
+                                                  </next>
+                                                </block>
+                                              </next>
+                                            </block>
+                                          </next>
+                                        </block>
+                                      </next>
+                                    </block>
+                                  </next>
+                                </block>
+                              </next>
+                            </block>
+                          </next>
+                        </block>
+                      </next>
+                    </block>
+                  </next>
+                </block>
+              </next>
+            </block>
+          </next>
+        </block>
+      </next>
+    </block>
+    <block xmlns="https://developers.google.com/blockly/xml" type="whenHovered" id="7|YgEF`wJa)BiA~Wdo/v" x="-1930" y="-810">
+      <mutation xmlns="http://www.w3.org/1999/xhtml" adveventoptions="false"></mutation>
+      <field name="X_RAY">FALSE</field>
+      <value name="VALUE">
+        <shadow type="objectList" id="$757J[;edp?R(,vG)(a5">
+          <field name="FIELDNAME">barcaza_cuajone_mesh</field>
+        </shadow>
+      </value>
+      <statement name="DO_OVER">
+        <block type="outline" id="I?f7C_FU^**bzDiF}6WX">
+          <field name="DO_WHAT">ENABLE</field>
+          <value name="TARGET">
+            <shadow type="objectList" id="CT)vdT(gr|J;P~V{BrIc">
+              <field name="FIELDNAME">barcaza_cuajone_mesh</field>
+            </shadow>
+          </value>
+        </block>
+      </statement>
+      <statement name="DO_OUT">
+        <block type="outline" id="SolC;Q?90@#?B]96[%Pk">
+          <field name="DO_WHAT">DISABLE</field>
+          <value name="TARGET">
+            <shadow type="objectList" id="tv3k)q+=!X(NQ4)9qTW5">
+              <field name="FIELDNAME">barcaza_cuajone_mesh</field>
+            </shadow>
+          </value>
+        </block>
+      </statement>
+      <next>
+        <block type="whenHovered" id="R4ol+,)AGF?7B$}TRk1]">
+          <mutation xmlns="http://www.w3.org/1999/xhtml" adveventoptions="false"></mutation>
+          <field name="X_RAY">FALSE</field>
+          <value name="VALUE">
+            <shadow type="objectList" id="c{+~yxl;YEGdqmM/s~7[">
+              <field name="FIELDNAME">barcaza_toquepala_mesh</field>
+            </shadow>
+          </value>
+          <statement name="DO_OVER">
+            <block type="outline" id="-Y2Y+bV);*p=nrEPVB0m">
+              <field name="DO_WHAT">ENABLE</field>
+              <value name="TARGET">
+                <shadow type="objectList" id="Z7zaqeZ8en.igP[;,,Hu">
+                  <field name="FIELDNAME">barcaza_toquepala_mesh</field>
+                </shadow>
+              </value>
+            </block>
+          </statement>
+          <statement name="DO_OUT">
+            <block type="outline" id="4C?767j=U#x@}%dCeA64">
+              <field name="DO_WHAT">DISABLE</field>
+              <value name="TARGET">
+                <shadow type="objectList" id="Hu-s_{QK@MRV}!y$)M5g">
+                  <field name="FIELDNAME">barcaza_toquepala_mesh</field>
+                </shadow>
+              </value>
+            </block>
+          </statement>
+          <next>
+            <block type="whenHovered" id="#Pu.avKiwR9YbtHA}EZH">
+              <mutation xmlns="http://www.w3.org/1999/xhtml" adveventoptions="false"></mutation>
+              <field name="X_RAY">FALSE</field>
+              <value name="VALUE">
+                <shadow type="objectList" id="Bg9~1~C[L3%d7MB-oy##">
+                  <field name="FIELDNAME">bombas_mesh</field>
+                </shadow>
+              </value>
+              <statement name="DO_OVER">
+                <block type="outline" id="z6k6#(|nPgD$y=T4hr2p">
+                  <field name="DO_WHAT">ENABLE</field>
+                  <value name="TARGET">
+                    <shadow type="objectList" id="+S-[^^4c$c;UzAT2_{?L">
+                      <field name="FIELDNAME">bombas_mesh</field>
+                    </shadow>
+                  </value>
+                </block>
+              </statement>
+              <statement name="DO_OUT">
+                <block type="outline" id="%RH?uqGRD|QCV=~s1Dyl">
+                  <field name="DO_WHAT">DISABLE</field>
+                  <value name="TARGET">
+                    <shadow type="objectList" id="-FVP.D=RDXf4e(ZISugB">
+                      <field name="FIELDNAME">bombas_mesh</field>
+                    </shadow>
+                  </value>
+                </block>
+              </statement>
+              <next>
+                <block type="whenHovered" id="$:.$,}y)l$w$y*R%oh2~">
+                  <mutation xmlns="http://www.w3.org/1999/xhtml" adveventoptions="false"></mutation>
+                  <field name="X_RAY">FALSE</field>
+                  <value name="VALUE">
+                    <shadow type="objectList" id="+|s`XY8dyhU{~{qb60[o">
+                      <field name="FIELDNAME">cuajone_mesh</field>
+                    </shadow>
+                  </value>
+                  <statement name="DO_OVER">
+                    <block type="outline" id="bDcbMk*?R!^c%sQ%WIC1">
+                      <field name="DO_WHAT">ENABLE</field>
+                      <value name="TARGET">
+                        <shadow type="objectList" id="M*$BgW-*bSl[N3c8Pbg`">
+                          <field name="FIELDNAME">cuajone_mesh</field>
+                        </shadow>
+                      </value>
+                    </block>
+                  </statement>
+                  <statement name="DO_OUT">
+                    <block type="outline" id="-:l?8-O+$Y)#./f,eZt[">
+                      <field name="DO_WHAT">DISABLE</field>
+                      <value name="TARGET">
+                        <shadow type="objectList" id=",ucY/d}p~95H1eUS|zc2">
+                          <field name="FIELDNAME">cuajone_mesh</field>
+                        </shadow>
+                      </value>
+                    </block>
+                  </statement>
+                </block>
+              </next>
+            </block>
+          </next>
+        </block>
+      </next>
+    </block>
+    <block xmlns="https://developers.google.com/blockly/xml" type="eventHTMLElem" id="5lnpY!n~g^L/PmN`02G*" disabled="true" x="-610" y="-210">
+      <field name="EVENT">click</field>
+      <field name="PARENT">FALSE</field>
+      <value name="ID">
+        <shadow type="text" id="HhtJ%XCyBU_0#c,S?a*L">
+          <field name="TEXT">1</field>
+        </shadow>
+      </value>
+      <statement name="DO">
+        <block type="setHTMLElemAttribute" id="H2*eU-x^9z+[JbYKkEJ#" disabled="true">
+          <field name="ATTRIBUTE">style</field>
+          <field name="PARENT">FALSE</field>
+          <value name="VALUE">
+            <block type="text" id="^m5RkpDvTTy9$dJyx@FG">
+              <field name="TEXT">transition: transform 1s; animation: flip-in-hor-bottom 2s;</field>
+            </block>
+          </value>
+          <value name="ID">
+            <shadow type="text" id="$Slk,wM[2FQl6|UnDvNr">
+              <field name="TEXT">1_dialog</field>
+            </shadow>
+          </value>
+          <next>
+            <block type="setHTMLElemStyle" id="#::`@Pasi]Gt6N5d*ne?" disabled="true">
+              <field name="PROPERTY">animation</field>
+              <field name="PARENT">FALSE</field>
+              <value name="VALUE">
+                <block type="text" id="^LP)CbT{Aj;7v1t}RsZs">
+                  <field name="TEXT">jello-horizontal 1s</field>
+                </block>
+              </value>
+              <value name="ID">
+                <shadow type="text" id="}3:u%hG|*SrAQ1$}#E9@">
+                  <field name="TEXT">1_dialog</field>
+                </shadow>
+              </value>
+            </block>
+          </next>
+        </block>
+      </statement>
+    </block>
+  </tab>
+  <editorsettings viewport-x="1602" viewport-y="28" viewport-w="300" viewport-h="150" viewport-hidden="false" toolbox-library-mode="true" toolbox-minimized-mode="false"></editorsettings>
+</xml>

@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<!-- __V3D_PUZZLES__ - enable Puzzles button in the App Manager -->
+<html lang="en">
+  <head>
+    <title>Bomba de impulsion agua</title>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0"
+    />
+
+    <script src="v3d.js"></script>
+    <script src="Bomba_de_impulsion_agua.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="Bomba_de_impulsion_agua.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <div id="preloader_screen">
+      <p class="loading__text">Cargando...</p>
+      <div class="loading__bar">
+        <div id="loading__progress_number" class="loading__progress"></div>
+      </div>
+    </div>
+
+    <div id="v3d-container"></div>
+
+    <!-- <div
+      class="fullscreen-button fullscreen-open"
+      title="Toggle fullscreen mode"
+      onclick="fullScreen(event);"
+    ></div> -->
+    <div class="header">
+      <div id="logo__quellaveco">
+        <svg
+          fill="currentColor"
+          xmlns="http://www.w3.org/2000/svg"
+          width="183"
+          height="41"
+          viewBox="0 0 183 41"
+        >
+          <g>
+            <path
+              d="M25.057 24.726c-.864.56-1.868.779-2.725 1.344-.966.544-2.304 1.169-2.565.984-.26-.182-.1-.44-.037-.671.542-1.284.481-2.802 1.262-3.976.369-.739.779-2.16 1.145-2.175.471-.027 1.949 1.525 2.603 2.682.24.53.923 1.201.317 1.812zm-.793-6.746c-.966-.955-2.618-2.791-3.19-2.44-.455.27-1.02 2.196-1.385 3.348-.71 1.719-1.192 3.379-1.654 5.209-.081.599-.357 1.4-.416 1.706-.058.313-.316 1.069-.39 1.385-.06.283-.485 1.685-.204 2.082.205.292.8.237 1.16.13 1.316-.309 2.134-.661 3.439-1.004.206-.112.478-.15.672-.238.912-.308 1.725-.865 2.6-1.263 1.245-.718 3.414-.923 3.474-2.798-.424-2.464-2.646-4.082-4.106-6.117z"
+            />
+            <path
+              d="M25.057 24.726c-.864.56-1.868.779-2.725 1.344-.966.544-2.304 1.169-2.565.984-.26-.182-.1-.44-.037-.671.542-1.284.481-2.802 1.262-3.976.369-.739.779-2.16 1.145-2.175.471-.027 1.949 1.525 2.603 2.682.24.53.923 1.201.317 1.812zm-.793-6.746c-.966-.955-2.618-2.791-3.19-2.44-.455.27-1.02 2.196-1.385 3.348-.71 1.719-1.192 3.379-1.654 5.209-.081.599-.357 1.4-.416 1.706-.058.313-.316 1.069-.39 1.385-.06.283-.485 1.685-.204 2.082.205.292.8.237 1.16.13 1.316-.309 2.134-.661 3.439-1.004.206-.112.478-.15.672-.238.912-.308 1.725-.865 2.6-1.263 1.245-.718 3.414-.923 3.474-2.798-.424-2.464-2.646-4.082-4.106-6.117z"
+            />
+            <path
+              d="M182.21 27.708h-1.816c-.41 0-.57-.223-.57-.593v-5.237c0-.828-.214-1.378-1.12-1.378-.648 0-1.455.294-2.01.771v5.86c0 .378-.154.577-.548.577h-1.851c-.337 0-.556-.18-.556-.534v-8.488c0-.37.14-.569.576-.569h1.61c.3 0 .512.081.553.413l.043.416a5.036 5.036 0 0 1 3.148-1.104c2.168 0 3.111 1.36 3.111 3.506v5.767c0 .394-.14.593-.57.593zm-13.862-6.75c-.353-.325-1.002-.672-1.59-.672-.964 0-1.87.786-1.87 2.615 0 1.222.313 2.676 1.811 2.676.703 0 1.415-.526 1.649-.828v-3.791zm3.347 6.75h-1.04c-1.166 0-1.633-.34-1.894-.91h-.035c-.535.611-1.788 1.166-2.76 1.166-2.832 0-4.148-2.249-4.148-4.868 0-3.482 2.162-5.253 4.331-5.253 1.098 0 1.986.511 2.397 1.103l.06-.431a.437.437 0 0 1 .454-.398h1.768c.284 0 .472.161.472.47v6.797c0 .193.078.331.3.331h.156c.276 0 .41.103.41.394v1.137c0 .302-.194.462-.47.462zm-10.748-.34c-1.042.478-1.851.596-3.01.596-2.995 0-4.823-1.794-4.823-4.907 0-3.187 1.91-5.214 5.039-5.214.926 0 1.813.137 2.739.53.175.076.251.157.251.356 0 .079-.015.14-.036.217l-.314 1.417c-.038.197-.14.27-.256.27-.076 0-.18-.038-.28-.073-.551-.213-1.117-.374-1.729-.374-1.534 0-2.363 1.024-2.363 2.715 0 1.788.867 2.756 2.227 2.756.846 0 1.222-.121 1.964-.416.082-.022.143-.053.219-.053.157 0 .234.112.274.252.098.352.413 1.252.413 1.572 0 .223-.155.281-.315.357zm-10.116.34h-1.772c-.411 0-.606-.138-.606-.577v-8.502c0-.393.253-.512.606-.512h1.772c.373 0 .576.103.576.512v8.502c0 .398-.182.577-.576.577zm-.928-10.728c-.74 0-1.587-.531-1.587-1.478 0-.966.78-1.52 1.587-1.52.787 0 1.575.554 1.575 1.5 0 .944-.826 1.498-1.575 1.498zm-2.868 1.412l-.297 1.852c-.035.21-.136.316-.312.316H146.323a1.98 1.98 0 0 0-.53-.06c-.65 0-1.319.271-1.811.771v5.883c0 .355-.16.554-.553.554h-1.846c-.358 0-.554-.18-.554-.554v-8.468c0-.466.232-.569.572-.569h1.595c.37 0 .55.103.567.398l.039.587c.71-.852 1.305-1.26 2.462-1.26.162 0 .376.043.551.073.157.042.22.126.235.26v.045c0 .058 0 .096-.015.172zm-12.067 1.71c-.986 0-1.635.79-1.774 1.718h3.289c0-.847-.495-1.718-1.515-1.718zm3.703 3.585h-5.518c.241 1.243 1.342 1.93 2.542 1.93.864 0 1.691-.193 2.48-.509a.529.529 0 0 1 .238-.057c.175 0 .271.118.312.271.08.335.375 1.24.375 1.531 0 .262-.177.335-.375.44-1.04.469-2.42.671-3.56.671-3.133 0-5.119-1.936-5.119-5.074 0-3.062 2.066-5.067 5.097-5.067 1.262 0 2.32.474 3.052 1.26.98 1.042 1.181 2.403 1.181 3.777v.264c0 .464-.218.563-.705.563zm-10.695 4.021h-1.77c-.41 0-.606-.138-.606-.577v-5.273c0-.786-.182-1.415-1.067-1.415-.688 0-1.494.37-2.027.828v5.86c0 .417-.177.577-.57.577h-1.615c-.414 0-.61-.138-.61-.577v-5.273c0-.786-.174-1.415-1.064-1.415-.65 0-1.32.328-1.867.828v5.86c0 .417-.183.577-.573.577h-1.768c-.418 0-.614-.138-.614-.577v-8.502c0-.35.221-.512.551-.512h1.612c.335 0 .533.119.58.413l.03.374c.788-.668 1.816-1.061 2.82-1.061 1.32 0 2.046.648 2.454 1.317.89-.882 2.188-1.317 3.429-1.317 1.534 0 2.5.866 2.855 1.671.355.79.394 1.672.394 3.07v4.547c0 .417-.175.577-.574.577zm-21.524-9.079a62.528 62.528 0 0 1-.353-1.142h-.043c-.098.356-.215.749-.352 1.162l-1.24 3.859h3.226l-1.238-3.879zm5.845 9.08h-2.206c-.471 0-.643-.224-.763-.555l-.792-2.283h-4.86l-.79 2.364c-.075.25-.233.473-.59.473h-2.243c-.215 0-.316-.138-.316-.321 0-.072 0-.152.043-.233l4.684-12.618c.117-.298.296-.484.67-.484h2.026c.398 0 .61.167.71.423l4.78 12.537a.976.976 0 0 1 .064.303c0 .233-.14.393-.417.393zm-18.185-7.545c-1.459 0-1.93 1.263-1.93 2.696 0 1.458.411 2.774 1.872 2.774 1.453 0 1.924-1.292 1.924-2.733 0-1.455-.413-2.737-1.866-2.737zm-.102 7.8c-3.328 0-4.88-2.146-4.88-5.074 0-2.902 1.829-5.047 5.017-5.047 3.33 0 4.887 2.145 4.887 5.073 0 2.902-1.835 5.048-5.024 5.048zm-6.983-.256H85.12c-.291 0-.528-.16-.528-.534V14.398c0-.393.176-.515.469-.55l1.867-.251h.202c.274 0 .41.164.41.485v13.072c0 .375-.196.554-.513.554zm-7.567-6.815c-.372-.356-.966-.63-1.537-.63-.512 0-.943.218-1.24.508-.532.538-.688 1.435-.688 2.145s.156 1.502.672 1.993c.313.31.782.437 1.18.437.607 0 1.293-.379 1.613-.708v-3.745zM77.567 32.01c-1.024 0-1.992-.152-3.03-.587-.256-.101-.352-.217-.352-.433 0-.122.034-.23.059-.334l.33-1.109c.08-.247.142-.387.295-.387.143 0 .237.022.378.076.729.281 1.492.453 2.164.453 1.794 0 2.049-.923 2.049-2.119v-.717c-.552.462-1.572.889-2.362.889-1.185 0-2.183-.373-2.913-1.103-.846-.82-1.265-2.108-1.265-3.543 0-2.653 1.538-5.211 4.434-5.211.472 0 .91.095 1.337.29.317.141.728.454.944.771l.04-.431c.02-.265.18-.398.51-.398h1.675c.411 0 .55.161.55.554v8.265c0 3.304-1.436 5.074-4.843 5.074zm-6.62-4.302h-1.812c-.408 0-.566-.223-.566-.593v-5.237c0-.828-.216-1.378-1.121-1.378-.654 0-1.46.294-2.01.771v5.86c0 .378-.159.577-.552.577h-1.85c-.337 0-.551-.18-.551-.534v-8.488c0-.37.138-.569.573-.569h1.616c.291 0 .51.081.549.413l.042.416a5.04 5.04 0 0 1 3.145-1.104c2.165 0 3.108 1.36 3.108 3.506v5.767c0 .394-.133.593-.57.593zM55.111 18.63a30.878 30.878 0 0 1-.355-1.142h-.039c-.1.356-.22.749-.354 1.162l-1.24 3.859h3.229l-1.24-3.879zm5.845 9.08h-2.207c-.469 0-.65-.224-.767-.555l-.786-2.283h-4.862l-.789 2.364c-.08.25-.235.473-.59.473H48.71c-.214 0-.313-.138-.313-.321 0-.072 0-.152.038-.233l4.688-12.618c.116-.298.297-.484.668-.484h2.025c.396 0 .612.167.71.423l4.786 12.537c.036.119.058.223.058.303 0 .233-.14.393-.414.393zm-31.093-.224c-4.008 2.973-8.212 5.458-13.129 6.237-.74.025-1.513-.207-1.97-.906-1.489-2.668.072-5.724.35-8.487.255-1.322.9-2.47 1.38-3.707l3.353-7.571c.524-.954 1.235-2.42 1.858-2.76.612-.336 1.642.828 2.282 1.416l.909 1.146a484.407 484.407 0 0 1 3.629 5.207c.99 1.879 2.17 3.697 2.72 5.757.279 1.383-.236 2.766-1.382 3.668zm3.512-6.863c-.5-2.55-2.374-4.57-3.9-6.662-2.155-3.008-5.447-4.746-8.4-6.549-.602-.313-1.491-.802-1.899-.71-.41.085-.526.497-.67.71a97.644 97.644 0 0 1-2.723 5.522c-1.042 2.752-1.733 5.7-2.604 8.48-1.299 2.938-2.668 6.135-2.403 9.43.145 1.33.196 2.783 1.34 3.627 1.38.808 3.122 1.007 4.775.95 4.101-.37 8.421-.428 11.792-2.685.203-.114 2.486-2.092 3.79-3.12.793-.742 1.874-1.528 2.048-2.603.148-2.06-.64-4.306-1.146-6.39zm4.933 6.785c-2.1 3.771-6.2 4.91-9.508 6.864-3.45 1.745-7.386 2.301-11 3.63-1.306.566-2.874.249-4.346.271-1.574-.062-2.986-.801-4.257-1.73-1.932-2.348-1.974-6.061-1.184-8.957.535-1.648.644-3.461 1.416-5.008 2.352-5.013 3.975-10.148 6.924-14.897.716-1.34.9-3.456 2.626-3.99.62-.096.767-.279 1.935-.087 1.597.62 3.604 1.775 4.536 2.485.933.721 7.652 7.636 10.573 11.877.724 1.123 1.4 2.349 2.01 3.547a9.81 9.81 0 0 1 .474 2.017c.114.851.778 2.87-.2 3.978zm2.604-6.506c-1.648-2.497-1.57-5.708-2.84-8.362-2.424-3.473-6.046-6.341-9.592-8.128-2.339-1.493-4.825-2.81-7.488-3.428-.452-.119-2.07-.325-3.077-.401-2.705.015-4.663 2.313-5.956 4.463-1.735 3.36-2.516 7.116-4.34 10.453-.03.176-.116.313-.197.473-1.588 3.124-3.066 6.296-5.125 9.229-1 1.843-2.145 3.729-2.171 5.875.196 2.248.583 4.647 2.722 6 1.962.968 3.951 1.965 6.112 2.327 1.242-.038 2.319.536 3.474.83 2.769.523 5.933.091 8.679-.398 3.16-.44 6.87.167 9.936-.985 2.513-1.244 5.178-2.1 7.458-3.905 1.348-1.49 3.331-2.78 4.059-4.655.77-3.283-.47-6.517-1.654-9.388z"
+            />
+          </g>
+        </svg>
+      </div>
+
+      <div id="eq__nombre" class="eq__nombre">
+        <h1>Bombas de Impulsión Agua</h1>
+        <h1>Fresca Río Titire</h1>
+        <h1>(1120-PU-001@005)</h1>
+      </div>
+    </div>
+    <div class="div__navigation">
+      <nav id="navigation">
+        <button id="btn__home" class="active" onclick="activeClass(event)">
+          <svg
+            stroke="currentColor"
+            fill="currentColor"
+            stroke-width="0"
+            viewBox="0 0 576 512"
+            height="1em"
+            width="1em"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M280.37 148.26L96 300.11V464a16 16 0 0 0 16 16l112.06-.29a16 16 0 0 0 15.92-16V368a16 16 0 0 1 16-16h64a16 16 0 0 1 16 16v95.64a16 16 0 0 0 16 16.05L464 480a16 16 0 0 0 16-16V300L295.67 148.26a12.19 12.19 0 0 0-15.3 0zM571.6 251.47L488 182.56V44.05a12 12 0 0 0-12-12h-56a12 12 0 0 0-12 12v72.61L318.47 43a48 48 0 0 0-61 0L4.34 251.47a12 12 0 0 0-1.6 16.9l25.5 31A12 12 0 0 0 45.15 301l235.22-193.74a12.19 12.19 0 0 1 15.3 0L530.9 301a12 12 0 0 0 16.9-1.6l25.5-31a12 12 0 0 0-1.7-16.93z"
+            ></path>
+          </svg>
+          <p>Inicio</p>
+        </button>
+        <button id="btn__explosion" onclick="activeClass(event)">
+          <svg
+            stroke="currentColor"
+            fill="currentColor"
+            stroke-width="0"
+            viewBox="0 0 16 16"
+            height="1em"
+            width="1em"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              fill-rule="evenodd"
+              d="M2 8a.5.5 0 01.5-.5h11a.5.5 0 010 1h-11A.5.5 0 012 8zm6-1.5a.5.5 0 00.5-.5V1.5a.5.5 0 00-1 0V6a.5.5 0 00.5.5z"
+              clip-rule="evenodd"
+            ></path>
+            <path
+              fill-rule="evenodd"
+              d="M10.354 3.854a.5.5 0 000-.708l-2-2a.5.5 0 00-.708 0l-2 2a.5.5 0 10.708.708L8 2.207l1.646 1.647a.5.5 0 00.708 0zM8 9.5a.5.5 0 01.5.5v4.5a.5.5 0 01-1 0V10a.5.5 0 01.5-.5z"
+              clip-rule="evenodd"
+            ></path>
+            <path
+              fill-rule="evenodd"
+              d="M10.354 12.146a.5.5 0 010 .708l-2 2a.5.5 0 01-.708 0l-2-2a.5.5 0 01.708-.708L8 13.793l1.646-1.647a.5.5 0 01.708 0z"
+              clip-rule="evenodd"
+            ></path>
+          </svg>
+          <p>Explosión</p>
+        </button>
+        <button id="btn__animacion" onclick="activeClass(event)">
+          <svg
+            stroke="currentColor"
+            fill="currentColor"
+            stroke-width="0"
+            viewBox="0 0 512 512"
+            height="1em"
+            width="1em"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8zm115.7 272l-176 101c-15.8 8.8-35.7-2.5-35.7-21V152c0-18.4 19.8-29.8 35.7-21l176 107c16.4 9.2 16.4 32.9 0 42z"
+            ></path>
+          </svg>
+          <p>Animación</p>
+        </button>
+      </nav>
+    </div>
+
+    <div id="description__container" class="container_description">
+      <div id="description" class="eq__description">
+        <p id="eq__1" class="description_p">
+          Son equipos estacionarios tipo centrífuga vertical, diseñados para
+          enviar flujo de agua fresca del río Titire mediante la fuerza
+          centrífuga que genera el movimiento de los impulsores, fabricadas por
+          SULZER PUMPS, modelo SJT 20DLC, las cuales trabajan con un motor
+          eléctrico de 1,960kW, con una capacidad de diseño de 693m3 /h.
+        </p>
+      </div>
+      <div id="leyenda" class="eq__leyenda" style="display: none">
+        <div class="leyenda_div">
+          <div class="cuadrado" style="background-color: orangered"></div>
+          <p>Succión de agua fresca</p>
+        </div>
+        <div class="leyenda_div">
+          <div class="cuadrado" style="background-color: green"></div>
+          <p>Descarga de agua fresca</p>
+        </div>
+      </div>
+
+      <div class="menu__etiquetas__sistemas" id="menu__etiquetas__sistemas">
+        <div class="container_tag" id="sis__1" style="display: none">
+          <div class="tag__title">
+            Motor eléctrico
+            <div>
+              <svg
+                stroke="currentColor"
+                fill="none"
+                stroke-width="0"
+                viewBox="0 0 24 24"
+                height="1em"
+                width="1em"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M16.3394 9.32245C16.7434 8.94589 16.7657 8.31312 16.3891 7.90911C16.0126 7.50509 15.3798 7.48283 14.9758 7.85938L12.0497 10.5866L9.32245 7.66048C8.94589 7.25647 8.31312 7.23421 7.90911 7.61076C7.50509 7.98731 7.48283 8.62008 7.85938 9.0241L10.5866 11.9502L7.66048 14.6775C7.25647 15.054 7.23421 15.6868 7.61076 16.0908C7.98731 16.4948 8.62008 16.5171 9.0241 16.1405L11.9502 13.4133L14.6775 16.3394C15.054 16.7434 15.6868 16.7657 16.0908 16.3891C16.4948 16.0126 16.5171 15.3798 16.1405 14.9758L13.4133 12.0497L16.3394 9.32245Z"
+                  fill="currentColor"
+                ></path>
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M1 12C1 5.92487 5.92487 1 12 1C18.0751 1 23 5.92487 23 12C23 18.0751 18.0751 23 12 23C5.92487 23 1 18.0751 1 12ZM12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12C21 16.9706 16.9706 21 12 21Z"
+                  fill="currentColor"
+                ></path>
+              </svg>
+            </div>
+          </div>
+          <p class="tag__description">
+            Su función principal es dar movimiento giratorio al sistema. Se basa
+            en los principios de atracción y repulsión electromagnéticas entre
+            el estator y rotor; en el cual circula una corriente eléctrica capaz
+            de excitar el bobinado del estator para generar un campo magnético;
+            de esta manera se produce el movimiento rotatorio del eje
+            perteneciente al rotor, el movimiento es cedido mediante un acople
+            flexible hacia el eje de la bomba instalado verticalmente.
+          </p>
+        </div>
+        <div class="container_tag" id="sis__2" style="display: none">
+          <div class="tag__title">
+            Caja de rodamientos
+            <div>
+              <svg
+                stroke="currentColor"
+                fill="none"
+                stroke-width="0"
+                viewBox="0 0 24 24"
+                height="1em"
+                width="1em"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M16.3394 9.32245C16.7434 8.94589 16.7657 8.31312 16.3891 7.90911C16.0126 7.50509 15.3798 7.48283 14.9758 7.85938L12.0497 10.5866L9.32245 7.66048C8.94589 7.25647 8.31312 7.23421 7.90911 7.61076C7.50509 7.98731 7.48283 8.62008 7.85938 9.0241L10.5866 11.9502L7.66048 14.6775C7.25647 15.054 7.23421 15.6868 7.61076 16.0908C7.98731 16.4948 8.62008 16.5171 9.0241 16.1405L11.9502 13.4133L14.6775 16.3394C15.054 16.7434 15.6868 16.7657 16.0908 16.3891C16.4948 16.0126 16.5171 15.3798 16.1405 14.9758L13.4133 12.0497L16.3394 9.32245Z"
+                  fill="currentColor"
+                ></path>
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M1 12C1 5.92487 5.92487 1 12 1C18.0751 1 23 5.92487 23 12C23 18.0751 18.0751 23 12 23C5.92487 23 1 18.0751 1 12ZM12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12C21 16.9706 16.9706 21 12 21Z"
+                  fill="currentColor"
+                ></path>
+              </svg>
+            </div>
+          </div>
+          <p class="tag__description">
+            Su función principal es soportar las cargas del eje de la bomba para
+            que pueda transmitir la velocidad desde su sistema de accionamiento
+            hacia los impulsores. La caja cuenta con 02 rodamientos que se
+            encargan de soportar cargas y reducir la fricción, uno está
+            instalado en el lado motor (rodamiento de bolas de contacto radial)
+            y el otro, en el lado de la bomba (rodamiento de rodillos de
+            contacto angular), ambos rodamientos soportan al eje de la bomba, el
+            cual cuenta con canal chavetero que permiten su unión con un acople
+            flexible.
+          </p>
+        </div>
+        <div class="container_tag" id="sis__3" style="display: none">
+          <div class="tag__title">
+            impulsores
+            <div>
+              <svg
+                stroke="currentColor"
+                fill="none"
+                stroke-width="0"
+                viewBox="0 0 24 24"
+                height="1em"
+                width="1em"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M16.3394 9.32245C16.7434 8.94589 16.7657 8.31312 16.3891 7.90911C16.0126 7.50509 15.3798 7.48283 14.9758 7.85938L12.0497 10.5866L9.32245 7.66048C8.94589 7.25647 8.31312 7.23421 7.90911 7.61076C7.50509 7.98731 7.48283 8.62008 7.85938 9.0241L10.5866 11.9502L7.66048 14.6775C7.25647 15.054 7.23421 15.6868 7.61076 16.0908C7.98731 16.4948 8.62008 16.5171 9.0241 16.1405L11.9502 13.4133L14.6775 16.3394C15.054 16.7434 15.6868 16.7657 16.0908 16.3891C16.4948 16.0126 16.5171 15.3798 16.1405 14.9758L13.4133 12.0497L16.3394 9.32245Z"
+                  fill="currentColor"
+                ></path>
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M1 12C1 5.92487 5.92487 1 12 1C18.0751 1 23 5.92487 23 12C23 18.0751 18.0751 23 12 23C5.92487 23 1 18.0751 1 12ZM12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12C21 16.9706 16.9706 21 12 21Z"
+                  fill="currentColor"
+                ></path>
+              </svg>
+            </div>
+          </div>
+          <p class="tag__description">
+            Su función principal es generar la fuerza centrífuga del flujo de
+            agua que ingresa a la bomba y descargarlo a presión requerida. Son 9
+            impulsores cerrados, cuyos alabes están distribuidos uniformemente.
+            Se encuentran instalados dentro de la carcasa y unidos al eje de la
+            bomba mediante canales chaveteros.
+          </p>
+        </div>
+        <div class="container_tag" id="sis__4" style="display: none">
+          <div class="tag__title">
+            Sistema de sellado
+            <div>
+              <svg
+                stroke="currentColor"
+                fill="none"
+                stroke-width="0"
+                viewBox="0 0 24 24"
+                height="1em"
+                width="1em"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M16.3394 9.32245C16.7434 8.94589 16.7657 8.31312 16.3891 7.90911C16.0126 7.50509 15.3798 7.48283 14.9758 7.85938L12.0497 10.5866L9.32245 7.66048C8.94589 7.25647 8.31312 7.23421 7.90911 7.61076C7.50509 7.98731 7.48283 8.62008 7.85938 9.0241L10.5866 11.9502L7.66048 14.6775C7.25647 15.054 7.23421 15.6868 7.61076 16.0908C7.98731 16.4948 8.62008 16.5171 9.0241 16.1405L11.9502 13.4133L14.6775 16.3394C15.054 16.7434 15.6868 16.7657 16.0908 16.3891C16.4948 16.0126 16.5171 15.3798 16.1405 14.9758L13.4133 12.0497L16.3394 9.32245Z"
+                  fill="currentColor"
+                ></path>
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M1 12C1 5.92487 5.92487 1 12 1C18.0751 1 23 5.92487 23 12C23 18.0751 18.0751 23 12 23C5.92487 23 1 18.0751 1 12ZM12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12C21 16.9706 16.9706 21 12 21Z"
+                  fill="currentColor"
+                ></path>
+              </svg>
+            </div>
+          </div>
+          <p class="tag__description">
+            Su función principal es evitar el paso de flujo de agua hacia la
+            caja de rodamientos y el motor. El sistema de sellado es tipo
+            mecánico y se encuentra instalado en el eje de la bomba, cuenta con
+            02 zonas, una dinámica y una estacionaria; la zona dinámica
+            conformada por un resorte, un o’ring, la zona estacionaria
+            conformada por un disco y un caucho exterior.
+          </p>
+        </div>
+        <div class="container_tag" id="sis__5" style="display: none">
+          <div class="tag__title">
+            Conjunto de tazones
+            <div>
+              <svg
+                stroke="currentColor"
+                fill="none"
+                stroke-width="0"
+                viewBox="0 0 24 24"
+                height="1em"
+                width="1em"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M16.3394 9.32245C16.7434 8.94589 16.7657 8.31312 16.3891 7.90911C16.0126 7.50509 15.3798 7.48283 14.9758 7.85938L12.0497 10.5866L9.32245 7.66048C8.94589 7.25647 8.31312 7.23421 7.90911 7.61076C7.50509 7.98731 7.48283 8.62008 7.85938 9.0241L10.5866 11.9502L7.66048 14.6775C7.25647 15.054 7.23421 15.6868 7.61076 16.0908C7.98731 16.4948 8.62008 16.5171 9.0241 16.1405L11.9502 13.4133L14.6775 16.3394C15.054 16.7434 15.6868 16.7657 16.0908 16.3891C16.4948 16.0126 16.5171 15.3798 16.1405 14.9758L13.4133 12.0497L16.3394 9.32245Z"
+                  fill="currentColor"
+                ></path>
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M1 12C1 5.92487 5.92487 1 12 1C18.0751 1 23 5.92487 23 12C23 18.0751 18.0751 23 12 23C5.92487 23 1 18.0751 1 12ZM12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12C21 16.9706 16.9706 21 12 21Z"
+                  fill="currentColor"
+                ></path>
+              </svg>
+            </div>
+          </div>
+          <p class="tag__description">
+            Su función principal es alojar a los impulsores, almacenar y
+            direccionar el fluido a través del ducto de descarga. Está
+            conformado por 7 tazones en cuyo interior alojan al impulsor, y la
+            campana de succión donde se encuentra fijado exteriormente una
+            canastilla de succión. Los tazones están unidos con pernos para su
+            fácil mantenimiento y cambio de impulsores.
+          </p>
+        </div>
+        <div class="container_tag" id="sis__6" style="display: none">
+          <div class="tag__title">
+            Carcasa
+            <div>
+              <svg
+                stroke="currentColor"
+                fill="none"
+                stroke-width="0"
+                viewBox="0 0 24 24"
+                height="1em"
+                width="1em"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M16.3394 9.32245C16.7434 8.94589 16.7657 8.31312 16.3891 7.90911C16.0126 7.50509 15.3798 7.48283 14.9758 7.85938L12.0497 10.5866L9.32245 7.66048C8.94589 7.25647 8.31312 7.23421 7.90911 7.61076C7.50509 7.98731 7.48283 8.62008 7.85938 9.0241L10.5866 11.9502L7.66048 14.6775C7.25647 15.054 7.23421 15.6868 7.61076 16.0908C7.98731 16.4948 8.62008 16.5171 9.0241 16.1405L11.9502 13.4133L14.6775 16.3394C15.054 16.7434 15.6868 16.7657 16.0908 16.3891C16.4948 16.0126 16.5171 15.3798 16.1405 14.9758L13.4133 12.0497L16.3394 9.32245Z"
+                  fill="currentColor"
+                ></path>
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M1 12C1 5.92487 5.92487 1 12 1C18.0751 1 23 5.92487 23 12C23 18.0751 18.0751 23 12 23C5.92487 23 1 18.0751 1 12ZM12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12C21 16.9706 16.9706 21 12 21Z"
+                  fill="currentColor"
+                ></path>
+              </svg>
+            </div>
+          </div>
+          <p class="tag__description">
+            Su función principal es alojar a los impulsores y al sistema de
+            sellado, además dirige el flujo de agua hacia el ducto de descarga.
+            La carcasa contiene en su parte inferior un ducto de succión en
+            donde se acopla una canastilla de succión, mientras que en su parte
+            superior esta instalada el ducto de descarga.
+          </p>
+        </div>
+        <div
+          class="container_tag"
+          id="sis__funcionamiento"
+          style="display: none"
+        >
+          <div class="tag__title">Principio de funcionamiento</div>
+          <p class="tag__description">
+            Inicia con el ingreso del flujo de agua por el ducto de succión, la
+            cual se da debido a una depresión en el interior de la bomba
+            permitiendo succionar el agua de la bocatoma del río Titire, al
+            ingresar el flujo de agua se produce una aceleración centrífuga por
+            el movimiento de los impulsores, alcanzando altas velocidades
+            mientras es dirigida al interior de la carcasa, pasando por los
+            impulsores que están unidos en serie, es aquí donde dicha velocidad
+            se va reduciendo por aumento del diámetro de la carcasa para así
+            aumentar la presión del fluido (principio de Venturi), el flujo de
+            agua es enviado hasta el ducto de descarga con una presión y
+            velocidad adecuada enviando hacia el sistema de alimentación de agua
+            fresca del proceso. El movimiento de los impulsores se logra
+            mediante la transmisión de energía cinética del eje principal, el
+            cual es soportado por rodamientos, que reducen las cargas axiales y
+            radiales que son generadas por el torque del eje del motor eléctrico
+            transmitidos por un acople flexible.
+          </p>
+        </div>
+      </div>
+    </div>
+    <footer>
+      <svg
+        fill="currentColor"
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 239.77 57.74"
+      >
+        <g>
+          <path
+            d="M77.52,18.68c0-.08,0-.13,0-.16v-.25a1,1,0,0,0-1-1H70.8a1,1,0,0,0-1,1c0,1.35,0,4.6,0,8.44V46.51c0,.08,0,.13,0,.16v.25a1,1,0,0,0,1,1h5.73a1,1,0,0,0,1-1c0-1.35,0-4.6,0-8.44Zm37.81-8.84H60a1,1,0,0,0-1,1.1c0,1.21,0,3.38,0,4.42a1,1,0,0,0,1,1.06H78.52s36.17,0,36.8,0a1,1,0,0,0,1-1V10.82A1,1,0,0,0,115.32,9.83Zm0,15.27H96.67a1,1,0,0,1-1-1,8.2,8.2,0,0,1,2.68-5.54c.44-.44.34-1.3-.92-1.3H90.16a.87.87,0,0,0-.72.38C82.13,28.3,87,46.07,105,46.77H115.3a1,1,0,0,0,1-1V41.25a1,1,0,0,0-1-1H104a8.36,8.36,0,0,1-8.33-7.57,1,1,0,0,1,1-1h18.62a1,1,0,0,0,1-1V26.11A1,1,0,0,0,115.3,25.1Zm50.49,15.15H137.63c-17.22-1.81-13.92-23.84.07-23.83h9.06a1,1,0,0,0,1-1V10.84a1,1,0,0,0-1-1h-11c-24,1.75-24.22,34.73-.36,36.92h20.07s9.7,0,10.33,0a1,1,0,0,0,1-1V41.23A1,1,0,0,0,165.79,40.25Z"
+          />
+          <path
+            d="M170.85,24.73h-8.74a6.24,6.24,0,0,1-3.36-.78,3.85,3.85,0,0,1-1.63-3.52q0-4,4.43-4H180a1,1,0,0,0,1-1v-4.6a1,1,0,0,0-1-1H160.6c-13.66,1-13.66,20.87.1,21.37h8.61a5.61,5.61,0,0,1,3.39,1.14,4.09,4.09,0,0,1,1.62,3.46,3.88,3.88,0,0,1-1.47,3.35,6.75,6.75,0,0,1-4,1.07,1,1,0,0,0-1,1.1c0,1.21,0,3.33,0,4.36a1,1,0,0,0,1,1.06h1.9c.32,0,.62,0,.92,0l.23,0,.83-.08h0c.28,0,.56-.09.83-.14l.21,0,.72-.18.08,0,.75-.25.19-.07.63-.26.09,0c.23-.1.45-.22.66-.34l.17-.09.54-.33.09-.06c.2-.13.39-.27.57-.41l.14-.11.45-.39.09-.08c.17-.15.33-.32.49-.48l.12-.13.38-.43.09-.1.4-.54.09-.14.3-.47.07-.12q.17-.29.32-.58l.07-.14c.08-.17.16-.34.23-.51l0-.09h0C184.24,33.72,180.83,25.12,170.85,24.73ZM227.19,9.86h-2.81c-7.94,0-6.44,0-6.73,0a1,1,0,0,0-1,1l0,4.59a1,1,0,0,0,1,1h9.53a4,4,0,0,1,3.39,1.6,5.87,5.87,0,0,1,1,3.59A6,6,0,0,1,230,26.22a4.33,4.33,0,0,1-3.1.87s-8.92,0-9.21,0a1,1,0,0,0-1,1l0,4.88a1,1,0,0,0,1,1h10.17C244.95,32,242.69,10.21,227.19,9.86Z"
+          />
+          <path
+            d="M214.14,9.89h-5.79a1,1,0,0,0-1,1V44h0a.34.34,0,0,0,.34.34.35.35,0,0,0,.19-.06c4-2.54,7-7,7.2-13.43V10.87A1,1,0,0,0,214.14,9.89Z"
+          />
+          <path
+            d="M205,37a.82.82,0,0,0-.59.25c-4.63,3.87-13,1.81-13.57-6.49V10.88a1,1,0,0,0-1-1h-5.71a1,1,0,0,0-1,1V30.77c.41,13.47,12.78,18.42,22,14.87h0a1,1,0,0,0,.65-.95V37.8A.82.82,0,0,0,205,37Z"
+          />
+          <path
+            d="M27.8.11c5,2.25,14,8.9,14.64,9.3a1,1,0,0,1,.26,1.67c-.14.1-11,10-13.11,11.75a1,1,0,0,1-1.66-.61c0-.43-.23-4.81-.23-4.81a6.77,6.77,0,0,0-6.6,2.41.85.85,0,0,1-1.29.09L13.51,12a.8.8,0,0,1,.13-1.2A23.5,23.5,0,0,1,26.78,5.48L26.35,1A1,1,0,0,1,27.8.11Z"
+          />
+          <path
+            d="M58,29.31c-2.61,4.82-9.91,13.31-10.35,13.91a1,1,0,0,1-1.69.14c-.09-.15-9.11-11.74-10.75-13.93a1,1,0,0,1,.73-1.62c.43,0,4.82.12,4.82.12a6.77,6.77,0,0,0-1.92-6.76.84.84,0,0,1,0-1.29l8.36-5.69a.8.8,0,0,1,1.19.22,23.49,23.49,0,0,1,4.32,13.5l4.54-.1A1,1,0,0,1,58,29.31Z"
+          />
+          <path
+            d="M.15,28.45c2.61-4.82,9.91-13.31,10.35-13.92a1,1,0,0,1,1.69-.13c.09.15,9.11,11.74,10.75,13.94A1,1,0,0,1,22.21,30c-.43,0-4.82-.12-4.82-.12a6.77,6.77,0,0,0,1.91,6.76.84.84,0,0,1,0,1.29l-8.36,5.69a.79.79,0,0,1-1.18-.22A23.46,23.46,0,0,1,5.43,29.86L.89,30A1,1,0,0,1,.15,28.45Z"
+          />
+          <path
+            d="M27.74,57.59C22.92,55,14.43,47.68,13.83,47.24a1,1,0,0,1-.13-1.69c.14-.09,11.74-9.11,13.93-10.75a1,1,0,0,1,1.61.73c0,.43-.12,4.82-.12,4.82a6.78,6.78,0,0,0,6.76-1.91.84.84,0,0,1,1.29,0l5.69,8.36A.8.8,0,0,1,42.65,48a23.51,23.51,0,0,1-13.49,4.33l.1,4.54A1,1,0,0,1,27.74,57.59Z"
+          />
+        </g>
+      </svg>
+    </footer>
+  </body>
+  <script>
+    var isOpen = false;
+    function activeClass(e) {
+      var elems = document.querySelectorAll(".active");
+      [].forEach.call(elems, function (el) {
+        el.classList.remove("active");
+      });
+      e.target.classList.add("active");
+    }
+    function fullScreen(e) {
+      if (!isOpen) {
+        var elem = document.documentElement;
+        if (elem.requestFullscreen) {
+          elem.requestFullscreen();
+        } else if (elem.webkitRequestFullscreen) {
+          /* Safari */
+          elem.webkitRequestFullscreen();
+        } else if (elem.msRequestFullscreen) {
+          /* IE11 */
+          elem.msRequestFullscreen();
+        }
+        var elems = document.querySelectorAll(".fullscreen-open");
+        [].forEach.call(elems, function (el) {
+          el.classList.remove("fullscreen-open");
+        });
+        e.target.classList.add("fullscreen-close");
+        isOpen = true;
+      } else {
+        var elems = document.querySelectorAll(".fullscreen-close");
+        [].forEach.call(elems, function (el) {
+          el.classList.remove("fullscreen-close");
+        });
+        e.target.classList.add("fullscreen-open");
+        if (document.exitFullscreen) {
+          document.exitFullscreen();
+        } else if (document.webkitExitFullscreen) {
+          /* Safari */
+          document.webkitExitFullscreen();
+        } else if (document.msExitFullscreen) {
+          /* IE11 */
+          document.msExitFullscreen();
+        }
+        isOpen = false;
+      }
+    }
+  </script>
+</html>

@@ -1,0 +1,50 @@
+.img {
+  display: block;
+}
+
+.evidencebutton {
+  color: "#FF0000";
+}
+
+.tab-responsive {
+  display: none;
+}
+
+.tab-item {
+  font-size: 1.3rem;
+}
+
+.tabs {
+  display: contents;
+}
+
+.Myimage {
+  width: "40%";
+  height: "40%";
+  display: "flex";
+  flex-direction: "column";
+}
+
+.cover__container {
+  box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.6) !important;
+}
+
+@media only screen and (max-width: 800px) {
+  /* For mobile phones: */
+  .tabs {
+    display: none;
+  }
+  .tab-responsive {
+    display: contents;
+  }
+  .image {
+    width: "60%" !important;
+    height: "60%" !important;
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  .container-image {
+    display: none !important;
+  }
+}

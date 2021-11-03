@@ -1,0 +1,12 @@
+@media only screen and (max-width: 700px) {
+  .subtitle {
+    padding-left: 0 !important;
+  }
+  .typografy {
+    display: none;
+  }
+
+  .css-rtvf4h-MuiPaper-root-MuiDrawer-paper {
+    width: 70px !important;
+  }
+}

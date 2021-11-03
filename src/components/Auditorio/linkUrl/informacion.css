@@ -1,0 +1,70 @@
+.BackGroundWhiteInfo {
+  position: absolute;
+  top: 0%;
+  right: 0%;
+  width: 500px;
+  height: 350px;
+  border-width: 3px;
+  border-style: solid;
+  border-color: rgba(112, 112, 112, 0.171);
+  border-radius: 10px;
+  display: none;
+}
+
+.buttonInformacion {
+  position: absolute;
+  top: 0%;
+  right: 0%;
+  display: none;
+  width: 50px;
+  height: 50px;
+}
+
+.buttonInformacion:hover {
+  cursor: pointer;
+}
+
+.buttonCloseInformacion {
+  position: absolute;
+  top: 0%;
+  right: 0%;
+  width: 40px;
+  height: 40px;
+}
+
+.buttonCloseInformacion:hover {
+  cursor: pointer;
+}
+
+.all-browsers {
+  margin: 0;
+  padding: 5px;
+  height: 100%;
+  color: aliceblue;
+  background-color: rgb(21, 21, 29);
+}
+
+.all-browsers > h1,
+.browser {
+  margin: 10px;
+  padding: 5px;
+  color: #049cd6;
+}
+
+.browser {
+  background: rgba(52, 64, 75, 0.247);
+}
+
+.browser > p {
+  text-align: left;
+  margin: 4px;
+  font-size: 90%;
+}
+
+h2 {
+  text-align: left;
+  margin: 4px;
+  font-size: 90%;
+  font-weight: bolder;
+  /* color: rgb(46, 98, 141); */
+}

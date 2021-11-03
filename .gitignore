@@ -1,0 +1,20 @@
+# dependencies
+/node_modules
+**/puzzles_backup/
+
+# gestores
+/yarn.lock
+/yarn-error.log
+/package-lock.json
+/package-error.json
+pnpm-lock.yaml
+
+# linter
+/.eslintcache
+/6
+
+# vs settings
+.vscode/
+
+# build
+build/
