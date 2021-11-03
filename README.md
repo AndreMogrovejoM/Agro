@@ -1,2 +1,0 @@
-# Agromin Backend
-
